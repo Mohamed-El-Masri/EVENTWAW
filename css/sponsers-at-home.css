@@ -1,0 +1,34 @@
+/*--------------------------------------------------------------
+# sponsers Section (clients at home page)
+--------------------------------------------------------------*/
+.clients {
+    padding: 20px 0;
+    background-color:#f9f9f9;
+  }
+  
+  .clients .client-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .clients .client-logo img {
+    padding: 20px 40px;
+    max-width: 90%;
+    transition: 0.3s;
+    opacity: 0.5;
+    filter: grayscale(100);
+  }
+  
+  .clients .client-logo img:hover {
+    filter: none;
+    opacity: 1;
+  }
+  
+  @media (max-width: 640px) {
+    .clients .client-logo img {
+      padding: 20px;
+    }
+  }
+  
