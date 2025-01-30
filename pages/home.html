@@ -15,8 +15,7 @@
   <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
   <!-- bootstrap icons -->
   <link rel="stylesheet" href="../vendor/bootstrap-icons/bootstrap-icons.css">
-  <!-- fontawesome -->
-  <link rel="stylesheet" href="../vendor/fontawesome/css/all.min.css">
+ 
    <!-- swiper js -->
    <link rel="stylesheet" href="../vendor/swiper/swiper-bundle.min.css">
   <!-- custom css -->
@@ -26,6 +25,11 @@
   <link rel="stylesheet" href="../css/sponsers-at-home.css">
   <link rel="stylesheet" href="../css/slider.css">
   <link rel="stylesheet" href="../css/upComingEvents.css">
+  <link rel="stylesheet" href="../css/GetstartPopUP.css">
+  <link rel="stylesheet" href="../css/scroll-to-top.css">
+
+   <!-- fontawesome -->
+   <link rel="stylesheet" href="../vendor/fontawesome/css/all.min.css">
   <!-- jquery -->
   <script src="../vendor/jquery/jquery-3.5.1.min.js"></script>
  
@@ -43,8 +47,8 @@
         <h1 class="sitename">EVENTWAW</h1><span>.</span>
       </a>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
+      <nav id="navmenu" class="navmenu navbar">
+        <ul class="links">
           <li><a href="#" class="active">Home</a></li>
           <li><a href="#">Events</a></li>
           <li><a href="#">About</a></li>
@@ -82,7 +86,7 @@
         <ul>
 
           <!-- <li><a href="#">Profile</a></li> -->
-          <li><a href="#">Get Started</a></li>
+          <li class="get-Started"><a href="#">Get Started</a></li>
           <!-- <li><a href="#">Logout</a></li> -->
         </ul>
       </div>
@@ -90,6 +94,70 @@
 
     </div>
   </header>
+
+<!-- Get Start Login and Register -->
+<div class="blur-bg-overlay"></div>
+<div class="form-popup">
+    <span class="close-btn material-symbols-rounded">close</span>
+    <div class="form-box login">
+        <div class="form-details">
+            <h2>Welcome Back</h2>
+            <p>Please log in using your personal information to stay connected with us.</p>
+        </div>
+        <div class="form-content">
+            <h2>LOGIN</h2>
+            <form action="#">
+                <div class="input-field">
+                    <input type="text" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <a href="#" class="forgot-pass-link">Forgot password?</a>
+                <button type="submit">Log In</button>
+            </form>
+            <div class="bottom-link">
+                Don't have an account?
+                <a href="#" id="signup-link">Signup</a>
+            </div>
+        </div>
+    </div>
+    <div class="form-box signup">
+        <div class="form-details">
+            <h2>Create Account</h2>
+            <p>To become a part of our community, please sign up using your personal information.</p>
+        </div>
+        <div class="form-content">
+            <h2>SIGNUP</h2>
+            <form action="#">
+                <div class="input-field">
+                    <input type="text" required>
+                    <label>Enter your email</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" required>
+                    <label>Create password</label>
+                </div>
+                <div class="policy-text">
+                    <input type="checkbox" id="policy">
+                    <label for="policy">
+                        I agree the
+                        <a href="#" class="option">Terms & Conditions</a>
+                    </label>
+                </div>
+                <button type="submit">Sign Up</button>
+            </form>
+            <div class="bottom-link">
+                Already have an account? 
+                <a href="#" id="login-link">Login</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
 <main>
   <!-- Hero Slider Section -->
@@ -405,6 +473,8 @@
   <script src="../js/main.js"></script>
   <script src="../js/slider.js"></script>
   <script src="../js/upComingEvents.js"></script>
+  <script src="../js/get-start-popup.js"></script>
+  
 </body>
 
 </html>
