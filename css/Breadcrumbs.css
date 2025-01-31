@@ -1,44 +1,135 @@
 /*--------------------------------------------------------------
 # Global Page Titles & Breadcrumbs
 --------------------------------------------------------------*/
-.page-title {
-    color: var(--default-color);
-    background-color: var(--background-color);
-    position: relative;
-  }
+.page-title-bar {
+  background: #121219;
+  position: relative;
+  padding: 100px 0px;
+  margin-top: -120px;
+  margin-bottom: 90px;
+}
+
+.page-title-bar .background {
+  background-image: url('../img/breadcrumbs-bg.jpg');
+
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  opacity: 0.40;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.page-title-bar .container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 150px;
+}
+
+.page-title-bar h1 {
+  margin: 0;
+  color: #FFFFFF;
+  font-size: 3.231rem;
+  font-weight: 600;
+  word-break: break-word;
   
-  .page-title .heading {
-    padding: 80px 0;
-    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+
+.breadcrumb {
+  color: #FFFFFF;
+  margin-top: 1vw;
+
+}
+
+.breadcrumb nav {
+  line-height: 1.7;
+  font-size: 1rem;
+
+}
+
+
+.breadcrumb ol {
+  list-style: none;
+  padding: 0;
+  margin: 0 -5px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+
+.breadcrumb .item {
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+  word-break: break-word;
+}
+
+.breadcrumb .item a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 1.5vw;
+  background-color: transparent;
+  transition: 0.2s;
+
+}
+
+.breadcrumb .item a:hover {
+  color: tomato;
+}
+
+.breadcrumb .item-current {
+  color: tomato;
+  font-size: 1.5vw;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .page-title-bar {
+      padding: 1vw 0;
   }
-  
-  .page-title .heading h1 {
-    font-size: 38px;
-    font-weight: 700;
+
+  .page-title-bar .container {
+      height: 15vh;
   }
-  
-  .page-title nav {
-    background-color: color-mix(in srgb, var(--default-color), transparent 95%);
-    padding: 20px 0;
+
+  .page-title-bar h1 {
+      font-size: 4vw;
   }
-  
-  .page-title nav ol {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    margin: 0;
-    font-size: 16px;
-    font-weight: 600;
+
+  .breadcrumb .item a,
+  .breadcrumb .item-current {
+      font-size: 3vw;
   }
-  
-  .page-title nav ol li+li {
-    padding-left: 10px;
+}
+
+@media (max-width: 576px) {
+  .page-title-bar .container {
+      height: 10vh;
   }
-  
-  .page-title nav ol li+li::before {
-    content: "/";
-    display: inline-block;
-    padding-right: 10px;
-    color: color-mix(in srgb, var(--default-color), transparent 70%);
+
+  .page-title-bar h1 {
+      font-size: 5vw;
   }
-  
+
+  .breadcrumb ol {
+      flex-direction: column;
+  }
+
+  .breadcrumb .item {
+      margin-bottom: 0.5vw;
+  }
+
+  .breadcrumb .item a,
+  .breadcrumb .item-current {
+      font-size: 4vw;
+  }
+}
