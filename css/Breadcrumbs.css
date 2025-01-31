@@ -5,8 +5,9 @@
   background: #121219;
   position: relative;
   padding: 100px 0px;
-  margin-top: -120px;
+  /* margin-top: -120px; */
   margin-bottom: 90px;
+  /* min-height: 30vh; */
 }
 
 .page-title-bar .background {
@@ -25,7 +26,7 @@
 .page-title-bar .container {
   position: relative;
   z-index: 1;
-  width: 100%;
+  max-width: 1200px;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -120,9 +121,7 @@
       font-size: 5vw;
   }
 
-  .breadcrumb ol {
-      flex-direction: column;
-  }
+ 
 
   .breadcrumb .item {
       margin-bottom: 0.5vw;

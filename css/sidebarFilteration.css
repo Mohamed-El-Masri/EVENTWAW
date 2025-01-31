@@ -1,0 +1,276 @@
+:root {
+    --default-font: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --heading-font: "Montserrat", sans-serif;
+    --nav-font: "Poppins", sans-serif;
+    --background-color: #ffffff;
+    --default-color: #212529;
+    --heading-color: #32353a;
+    --accent-color: #e84545;
+    --surface-color: #ffffff;
+    --contrast-color: #ffffff;
+    --nav-color: #3a3939;
+    --nav-hover-color: #e84545;
+    --nav-mobile-background-color: #ffffff;
+    --nav-dropdown-background-color: #ffffff;
+    --nav-dropdown-color: #3a3939;
+    --nav-dropdown-hover-color: #e84545;
+    scroll-behavior: smooth;
+}
+
+.sidebar-filter {  
+    width: 100%; /* Full width on small screens */  
+    max-width: 1200px; /* Max width on larger screens */  
+    padding: 20px;  
+    background-color: var(--surface-color);  
+    border-radius: 5px;  
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  
+    margin: 20px auto; /* Centered on small screens */  
+    height: fit-content;
+    font-family: var(--default-font);
+}  
+
+@media (min-width: 768px) {  
+    .sidebar-filter {  
+        max-width: 380px; /* Max width on larger screens */
+        margin: 20px; /* Default margin on larger screens */  
+    }  
+}  
+
+@media (max-width: 767px) {
+    .sidebar-filter {
+        width: 100%; /* Ensure full width on small screens */
+        margin: 0 auto; /* Centered on small screens */
+    }
+}
+
+.filter-heading {  
+    font-size: 18px;  
+    margin-bottom: 15px;  
+    color: var(--heading-color);
+    font-family: var(--heading-font);
+}  
+
+.filter-section {  
+    margin-bottom: 20px;  
+}  
+
+.filter-section h4 {  
+    font-size: 16px;  
+    margin-bottom: 10px;  
+    color: var(--heading-color);
+    font-family: var(--heading-font);
+}  
+
+.checkbox-label {  
+    display: block;  
+    margin: 5px 0;  
+    color: var(--default-color);
+}  
+
+.filter-options {  
+    margin-bottom: 10px;  
+}  
+
+.location-select,  
+.date-picker {  
+    width: 100%;  
+    padding: 8px;  
+    margin-bottom: 10px;  
+    border: 1px solid #ccc;
+    background-color: var(--surface-color);
+    color: var(--default-color);
+}  
+
+.month-grid {  
+    display: flex;  
+    gap: 5px;  
+    flex-wrap: wrap; /* Wrap buttons on small screens */  
+}  
+
+.month-btn {  
+    flex: 1;  
+    padding: 8px;  
+    border: 1px solid #ccc;  
+    background-color: var(--surface-color);  
+    cursor: pointer;  
+    color: var(--default-color);
+}  
+
+.month-btn.active {  
+    background-color: var(--accent-color);  
+    color: var(--contrast-color);  
+}  
+
+.range-slider {  
+    width: 100%;  
+}  
+
+.clear-filters {  
+    width: 100%;  
+    padding: 10px;  
+    background-color: var(--accent-color);  
+    color: var(--contrast-color);  
+    border: none;  
+    cursor: pointer;  
+    transition: background-color 0.3s;  
+}  
+
+.clear-filters:hover {  
+    background-color: #c9302c;  
+}
+
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+.dropdown-btn {
+    background: var(--surface-color);
+    border: 1px solid #ddd;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--default-color);
+  }
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    background: var(--surface-color);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    z-index: 1000;
+  }
+  
+.dropdown-content.show {
+    display: block;
+  }
+  
+.dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: var(--default-color);
+  }
+  
+.dropdown-content a:hover {
+    background: #f5f5f5;
+  }
+
+  .price-range {  
+    display: flex;  
+    flex-direction: column;  
+    gap: 10px;  
+}  
+
+.price-values {  
+    display: flex;  
+    justify-content: space-between;  
+    font-family: var(--default-font);  
+    color: var(--default-color); /* تأكد من تعريف --text-color */  
+}  
+
+.price-current {  
+    font-weight: bold;  
+    color: var(--accent-color);  
+}  
+
+.range-slider {  
+    -webkit-appearance: none;  
+    appearance: none;  
+    width: 100%;  
+    height: 10px;  
+    background: linear-gradient(to right, var(--accent-color) 0%, var(--accent-color) var(--value), #d3d3d3 var(--value), #d3d3d3 100%); /* لون ديناميكي */  
+    border-radius: 5px;  
+    outline: none;  
+    transition: background 0.3s ease;  
+}  
+
+.range-slider::-webkit-slider-thumb {  
+    -webkit-appearance: none;  
+    appearance: none;  
+    width: 20px;  
+    height: 20px;  
+    background: var(--accent-color);  
+    border-radius: 50%;  
+    cursor: pointer;  
+    transition: background-color 0.3s ease;  
+}  
+
+.range-slider::-moz-range-thumb {  
+    width: 20px;  
+    height: 20px;  
+    background: var(--accent-color);  
+    border-radius: 50%;  
+    cursor: pointer;  
+    transition: background-color 0.3s ease;  
+}  
+
+.range-slider::-webkit-slider-thumb:hover,   
+.range-slider::-moz-range-thumb:hover {  
+    background: #c9302c;  
+}  
+
+.range-slider::-webkit-slider-runnable-track {  
+    background: transparent;  
+}  
+
+.range-slider::-moz-range-track {  
+    background: transparent;  
+}  
+
+.range-slider::-moz-range-progress {  
+    background: var(--accent-color);  
+}  
+
+.range-slider::-ms-track {  
+    width: 100%;  
+    height: 10px;  
+    background: transparent;  
+    border-color: transparent;  
+    color: transparent;  
+}  
+
+.range-slider::-ms-thumb {  
+    width: 20px;  
+    height: 20px;  
+    background: var(--accent-color);  
+    border-radius: 50%;  
+    cursor: pointer;  
+}  
+
+.range-slider::-ms-fill-lower {  
+    background: var(--accent-color);  
+}  
+
+.range-slider::-ms-fill-upper {  
+    background: #d3d3d3;  
+}  
+
+.range-slider::-webkit-slider-thumb:active,   
+.range-slider::-moz-range-thumb:active {  
+    background: #c9302c;  
+}  
+
+.range-slider::-moz-focus-outer {  
+    border: 0;  
+}
+
+.checkbox-label input[type="checkbox"]:checked + span {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.checkbox-label input[type="checkbox"]:checked + span + .count {
+    color: var(--accent-color);
+}
+
+.checkbox-label input[type="checkbox"]:checked {
+    accent-color: var(--accent-color);
+}

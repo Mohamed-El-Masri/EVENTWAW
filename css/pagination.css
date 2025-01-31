@@ -1,0 +1,59 @@
+/*--------------------------------------------------------------
+# Blog Pagination Section
+--------------------------------------------------------------*/
+.blog-pagination {
+    color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
+.blog-pagination ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.blog-pagination li {
+    margin: 0 5px;
+    transition: 0.3s;
+}
+
+.blog-pagination li a {
+    color: color-mix(in srgb, var(--default-color), transparent 40%);
+    padding: 7px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-pagination li a.active,
+.blog-pagination li a:hover {
+    background: var(--accent-color);
+    color: var(--contrast-color);
+}
+
+.blog-pagination li a.active a,
+.blog-pagination li a:hover a {
+    color: var(--contrast-color);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .blog-pagination li {
+        margin: 0 3px;
+    }
+
+    .blog-pagination li a {
+        padding: 5px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-pagination li {
+        margin: 0 2px;
+    }
+
+    .blog-pagination li a {
+        padding: 3px 8px;
+    }
+}

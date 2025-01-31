@@ -2,40 +2,42 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EVENTWAW | </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EVENTWAW | </title>
 
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
-    <!-- bootstrap icons -->
-    <link rel="stylesheet" href="../vendor/bootstrap-icons/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+  <!-- bootstrap icons -->
+  <link rel="stylesheet" href="../vendor/bootstrap-icons/bootstrap-icons.css">
 
-    <!-- swiper js -->
+  <!-- swiper js -->
 
-    <!-- custom css -->
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/GetstartPopUP.css">
-    <link rel="stylesheet" href="../css/scroll-to-top.css">
-    <link rel="stylesheet" href="../css/Breadcrumbs.css">
-    <!-- fontawesome -->
-    <link rel="stylesheet" href="../vendor/fontawesome/css/all.min.css">
-    <!-- jquery -->
-    <script src="../vendor/jquery/jquery-3.5.1.min.js"></script>
+  <!-- custom css -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/GetstartPopUP.css">
+  <link rel="stylesheet" href="../css/scroll-to-top.css">
+  <link rel="stylesheet" href="../css/Breadcrumbs.css">
+  <link rel="stylesheet" href="../css/Pagination.css">
+  <link rel="stylesheet" href="../css/EventCard.css">
+  <link rel="stylesheet" href="../css/sidebarFilteration.css">
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="../vendor/fontawesome/css/all.min.css">
+  <!-- jquery -->
+  <script src="../vendor/jquery/jquery-3.5.1.min.js"></script>
 
 </head>
 
 <body>
-     
   <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
@@ -45,10 +47,11 @@
 
       <nav id="navmenu" class="navmenu navbar">
         <ul class="links">
-          <li><a href="#" class="active">Home</a></li>
-          <li><a href="#">Events</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="./home.html" class="active">Home</a></li>
+          <li><a href="./Events.html">Events</a></li>
+          <li><a href="./Event-details.html">Event</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./contact.html">Contact</a></li>
           <li><a class="btn-addEvent me-3 " href="#">Add Event</a></li>
           <li>
             <div class="search-bar">
@@ -90,40 +93,262 @@
 
     </div>
   </header>
-
-
-
-
-
-    <div class="page-title-bar">
-        <div class="background"></div>
-        <div class="container">
-            <h1>LA Beach Picnic</h1>
-            <div class="breadcrumb">
-                <nav aria-label="breadcrumb">
-                    <ol>
-                        <li class="item item-home"><a href="#">Home</a></li>
-                        <li class="item"><a href="#">Events</a></li>
-                        <li class="item item-current">LA Beach Picnic</li>
-                    </ol>
-                </nav>
+<!-- Get Start Login and Register -->
+<div class="blur-bg-overlay"></div>
+<div class="form-popup">
+    <span class="close-btn material-symbols-rounded">close</span>
+    <div class="form-box login">
+        <div class="form-details">
+            <h2>Welcome Back</h2>
+            <p>Please log in using your personal information to stay connected with us.</p>
+        </div>
+        <div class="form-content">
+            <h2>LOGIN</h2>
+            <form action="#">
+                <div class="input-field">
+                    <input type="text" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <a href="#" class="forgot-pass-link">Forgot password?</a>
+                <button type="submit">Log In</button>
+            </form>
+            <div class="bottom-link">
+                Don't have an account?
+                <a href="#" id="signup-link">Signup</a>
             </div>
         </div>
     </div>
+    <div class="form-box signup">
+        <div class="form-details">
+            <h2>Create Account</h2>
+            <p>To become a part of our community, please sign up using your personal information.</p>
+        </div>
+        <div class="form-content">
+            <h2>SIGNUP</h2>
+            <form action="#">
+                <div class="input-field">
+                    <input type="text" required>
+                    <label>Enter your email</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" required>
+                    <label>Create password</label>
+                </div>
+                <div class="policy-text">
+                    <input type="checkbox" id="policy">
+                    <label for="policy">
+                        I agree the
+                        <a href="#" class="option">Terms & Conditions</a>
+                    </label>
+                </div>
+                <button type="submit">Sign Up</button>
+            </form>
+            <div class="bottom-link">
+                Already have an account? 
+                <a href="#" id="login-link">Login</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
 
+  <!-- breadcrumb -->
+  <div class="page-title-bar">
+    <div class="background"></div>
+    <div class="container">
+      <h1>../</h1>
+      <div class="breadcrumb">
+        <nav aria-label="breadcrumb">
+          <ol>
+            <li class="item item-home"><a href="#">Home ></a></li>
+            <li class="item item-current"><a href="#">Events</a></li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <!-- breadcrumb end -->
 
 
 
+  <!-- events Cards with sidebar filteratio -->
+  <section class="upcoming-events">
+    <!-- Sidebar Filter -->
+    <div class="sidebar-filter">
+      <h3 class="filter-heading">Filter By</h3>
+
+      <!-- Categories -->
+      <div class="filter-section">
+        <h4>Categories</h4>
+        <div class="filter-options">
+          <label class="checkbox-label">
+            <input type="checkbox" name="category" value="music">
+            <span>Music</span>
+            <span class="count">(15)</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="category" value="sports">
+            <span>Sports</span>
+            <span class="count">(8)</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="category" value="theater">
+            <span>Theater</span>
+            <span class="count">(12)</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Location -->
+      <div class="filter-section">
+        <h4>Location</h4>
+        <select class="location-select">
+          <option value="">All Locations</option>
+          <option value="new-york">New York</option>
+          <option value="london">London</option>
+          <option value="paris">Paris</option>
+        </select>
+      </div>
+
+      <!-- Month -->
+      <div class="filter-section">
+        <h4>Month</h4>
+        <div class="month-grid">
+          <button class="month-btn">Jan</button>
+          <button class="month-btn">Feb</button>
+          <button class="month-btn active">Mar</button>
+          <button class="month-btn">Apr</button>
+        </div>
+      </div>
+
+      <!-- Date -->
+      <div class="filter-section">
+        <h4>Date</h4>
+        <input type="date" class="date-picker">
+      </div>
+
+      <!-- Price Range -->
+      <div class="filter-section">
+        <h4>Price Range</h4>
+        <div class="price-range">
+          <input type="range" class="range-slider" id="slider" value="500" min="0" max="1000" step="10" />  
+          <div class="price-values">
+            <span>$0</span>
+            <span class="price-current">$500</span>
+            <span>$1000</span>
+          </div>
+        </div>
+      </div>
+
+      <button class="clear-filters">Clear All Filters</button>
+    </div>
+
+
+    <div class="container">
+      <!-- <div class="section-title text-center">
+              <h2>Upcoming Events</h2>
+              <p>Discover the latest events in EVENTWAW</p>
+          </div> -->
+
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="shorting-wrap">
+          <h5 class="shorting-title">507 Results</h5>
+          <!-- Update dropdown markup -->
+          <div class="shorting-right">
+            <label>Sort By:</label>
+            <div class="custom-dropdown">
+              <button class="dropdown-btn">
+                <span class="selection">Most Rated</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="#" data-sort="most-rated">Most Rated</a>
+                <a href="#" data-sort="most-viewed">Most Viewed</a>
+                <a href="#" data-sort="newest">Newest First</a>
+                <a href="#" data-sort="price-low">Price: Low to High</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="upcoming-events__grid">
+        <!-- Event Card -->
+        <div class="upcoming-events__card" data-rating="4.5" data-views="1500" data-date="2024-03-15" data-price="150">
+          <div class="upcoming-events__card-image">
+            <img src="../img/blog/blog-2.jpg" alt="Music Event">
+            <div class="upcoming-events__card-date">
+              <span class="day">15</span>
+              <span class="month">Mar</span>
+            </div>
+          </div>
+          <div class="upcoming-events__card-content" data-rating="4.0" data-views="1700" data-date="2024-03-13"
+            data-price="155">
+
+            <div class="upcoming-events__card-category">Music</div>
+            <h3 class="upcoming-events__card-title">Summer Music Festival</h3>
+            <div class="upcoming-events__card-info">
+              <span><i class="fas fa-map-marker-alt"></i> EVENTWAW Stadium</span>
+              <span><i class="fas fa-clock"></i> 18:00</span>
+            </div>
+
+            <a href="#" class="upcoming-events__card-btn">View Details</a>
+          </div>
+        </div>
+        <div class="upcoming-events__card">
+          <div class="upcoming-events__card-image">
+            <img src="../img/blog/blog-2.jpg" alt="Music Event">
+            <div class="upcoming-events__card-date">
+              <span class="day">15</span>
+              <span class="month">Mar</span>
+            </div>
+          </div>
+          <div class="upcoming-events__card-content">
+
+            <div class="upcoming-events__card-category">Music</div>
+            <h3 class="upcoming-events__card-title">Summer Music Festival</h3>
+            <div class="upcoming-events__card-info">
+              <span><i class="fas fa-map-marker-alt"></i> EVENTWAW Stadium</span>
+              <span><i class="fas fa-clock"></i> 18:00</span>
+            </div>
+
+            <a href="#" class="upcoming-events__card-btn">View Details</a>
+          </div>
+        </div>
+
+        <!-- Repeat for other cards with different content -->
+      </div>
+      <!--Pagination Section -->
+      <section id="blog-pagination" class="blog-pagination section">
+
+        <div class="container">
+          <div class="d-flex justify-content-center">
+            <ul>
+              <li><a href="#"><i class="bi bi-chevron-left"></i></a></li>
+              <li><a href="#">1</a></li>
+              <li><a href="#" class="active">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li>...</li>
+              <li><a href="#">10</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+      </section><!-- / Pagination Section -->
+    </div>
+  </section>
 
 
 
-
-
- 
-<footer id="footer" class="footer position-relative light-background">
+  <footer id="footer" class="footer position-relative light-background">
 
     <div class="container footer-top">
       <div class="row gy-4">
@@ -131,7 +356,8 @@
           <a href="index.html" class="logo d-flex align-items-center">
             <span class="sitename">EVENTWAW</span>
           </a>
-          <p>Join us to discover and book the best events in EVENTWAW. From music festivals to art exhibitions, we have something for everyone. Stay updated and never miss out on the fun!</p>
+          <p>Join us to discover and book the best events in EVENTWAW. From music festivals to art exhibitions, we have
+            something for everyone. Stay updated and never miss out on the fun!</p>
           <div class="social-links d-flex mt-4">
             <a href=""><i class="bi bi-twitter-x"></i></a>
             <a href=""><i class="bi bi-facebook"></i></a>
@@ -139,7 +365,7 @@
             <a href=""><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
-  
+
         <div class="col-lg-2 col-6 footer-links">
           <h4>Useful Links</h4>
           <ul>
@@ -150,7 +376,7 @@
             <li><a href="#">Privacy policy</a></li>
           </ul>
         </div>
-  
+
         <div class="col-lg-2 col-6 footer-links">
           <h4>Our Services</h4>
           <ul>
@@ -161,7 +387,7 @@
             <li><a href="#">Graphic Design</a></li>
           </ul>
         </div>
-  
+
         <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
           <h4>Contact Us</h4>
           <p>A108 Adam Street</p>
@@ -170,37 +396,45 @@
           <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
           <p><strong>Email:</strong> <span>info@example.com</span></p>
         </div>
-  
+
       </div>
     </div>
-  
+
     <div class="container copyright text-center mt-4">
       <p>© <span>Copyright</span> <strong class="sitename">EVENTWAW</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
-      
+
       </div>
     </div>
-  
+
   </footer>
-  
+
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-  
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
   <!-- Preloader -->
   <div id="preloader"></div>
+
+
+
+
+
+  <!-- bootstrap -->
+  <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <!-- swiper js -->
+
+  <!-- custom js -->
+  <script src="../js/main.js"></script>
+  <script src="../js/get-start-popup.js"></script>
+
+  <script src="../js/sidebarFilter.js"></script>
+  <!-- <script src="../js/upComingEvents.js"></script> -->
+
   
-  
-  
-  
-  
-    <!-- bootstrap -->
-    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
-    <!-- swiper js -->
-   
-    <!-- custom js -->
-    <script src="../js/main.js"></script>
-    <script src="../js/get-start-popup.js"></script>
-       
+</script>
+
 </body>
 
 </html>
