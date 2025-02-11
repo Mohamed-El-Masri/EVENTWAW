@@ -1,0 +1,121 @@
+.about-section {
+    padding: 60px 0;
+    background-color: var(--background-color);
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-content {
+    padding: 20px;
+}
+
+.about-content h2 {
+    font-size: 32px;
+    color: var(--heading-color);
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 16px;
+    color: var(--default-color);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.about-content .btn {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.about-content .btn:hover {
+    background-color: var(--accent-hover-color);
+}
+
+.team-section {
+    padding: 60px 0;
+    background-color: var(--surface-color);
+}
+
+.team-section .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.team-section .section-title h2 {
+    font-size: 32px;
+    color: var(--heading-color);
+    margin-bottom: 10px;
+}
+
+.team-section .section-title p {
+    font-size: 16px;
+    color: var(--default-color);
+}
+
+.team-member {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.team-member h4 {
+    font-size: 20px;
+    color: var(--heading-color);
+    margin-bottom: 5px;
+}
+
+.team-member p {
+    font-size: 14px;
+    color: var(--default-color);
+}
+
+.clients-section {
+    padding: 60px 0;
+    background-color: var(--background-color);
+}
+
+.clients-section .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.clients-section .section-title h2 {
+    font-size: 32px;
+    color: var(--heading-color);
+    margin-bottom: 10px;
+}
+
+.clients-section .section-title p {
+    font-size: 16px;
+    color: var(--default-color);
+}
+
+.clients-section .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.clients-section img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.clients-section img:hover {
+    transform: scale(1.05);
+}

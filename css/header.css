@@ -91,7 +91,7 @@
     justify-self: center;
     gap: 1rem;
   }
-  .register-login-logut-profile ul{
+  /* .register-login-logut-profile ul{
     display: flex;
     margin-bottom: 0;
     list-style: none;
@@ -99,19 +99,104 @@
     background-color:var(--accent-color);
     padding: 0.5rem 1rem;
     border-radius: 20px;
-  
   }
-  
   .register-login-logut-profile ul li a{
     color: white;
+  } */
+
+  .register-login-logut-profile .get-Started{
+    display: flex;
+    margin-bottom: 0;
+    list-style: none;
+    gap: 1rem;
+    background-color:var(--accent-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+  }
+  .register-login-logut-profile .get-Started a{
+    color: white;
+  }
+
+  .register-login-logut-profile span{
+    width: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* aspect-ratio: 1/2; */
+  }
+
+  .register-login-logut-profile .avatar { 
+    /* position: relative; */
+  }
+  .register-login-logut-profile .avatar img{ 
+    width: 3rem ;
+    aspect-ratio: 1;
+    object-fit: contain;
+  }
+  .register-login-logut-profile .avatar .avatar-menu.show{ 
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 2px 1px #32353a;
+    /* padding: 3rem; */
+    transform: translateX(-50%);      
+    /* left: 50%; */
+    top: 150%;
+    border: 5px solid transparent;
+    border-top-color:var(--accent-color) ;
+    padding: 0 !important;
+    /* padding: 0.5rem; */
+
+  }
+ .register-login-logut-profile .avatar-menu{
+    list-style: none;
+  }
+ .register-login-logut-profile .avatar-menu li{
+    display: block;
+    padding: 1.6rem  2.5rem;
+
+  }
+  /* .register-login-logut-profile .avatar li a{
+    color: white;
+  }  */
+
+  .cartIcon {
+    display: block;
+    color: var(--heading-color);
+    margin-bottom: 0;
+    background-color: var(--accent-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .cartIcon i {
+    color: white;
+    font-size: 1rem;
+  }
+
+  .cartIcon:hover {
+    background-color: color-mix(in srgb, var(--accent-color), transparent 15%);
+    color: var(--contrast-color);
+  }
+
+  .cartIcon:hover i {
+    color: var(--contrast-color);
   }
   @media (max-width: 1200px) {
     
   
     .header .register-login-logut-profile {
       order: 2;
-    
       padding: 6px 20px;
+    }
+  
+    .header .register-login-logut-profile .get-Started span{
+      display: none;
+    }
+
+    .header .register-login-logut-profile .get-Started i{
+      font-size: 1rem;
+
     }
   
     .header .navmenu {

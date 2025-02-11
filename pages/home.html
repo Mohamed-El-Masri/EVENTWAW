@@ -15,9 +15,9 @@
   <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
   <!-- bootstrap icons -->
   <link rel="stylesheet" href="../vendor/bootstrap-icons/bootstrap-icons.css">
- 
-   <!-- swiper js -->
-   <link rel="stylesheet" href="../vendor/swiper/swiper-bundle.min.css">
+
+  <!-- swiper js -->
+  <link rel="stylesheet" href="../vendor/swiper/swiper-bundle.min.css">
   <!-- custom css -->
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/header.css">
@@ -28,13 +28,14 @@
   <link rel="stylesheet" href="../css/GetstartPopUP.css">
   <link rel="stylesheet" href="../css/scroll-to-top.css">
   <link rel="stylesheet" href="../css/pagination.css">
+  <link rel="stylesheet" href="../css/floatCart.css">
 
-   <!-- fontawesome -->
-   <link rel="stylesheet" href="../vendor/fontawesome/css/all.min.css">
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="../vendor/fontawesome/css/all.min.css">
   <!-- jquery -->
   <script src="../vendor/jquery/jquery-3.5.1.min.js"></script>
- 
- 
+
+
 
 </head>
 
@@ -63,425 +64,426 @@
               <input type="text" placeholder="Search for events...">
             </div>
           </li>
-          <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li> -->
+
         </ul>
 
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-      <div class="register-login-logut-profile">
+      <div class="register-login-logut-profile ">
 
-        <ul>
+        <span class="cartIcon" onclick="toggleCart()"><a href="#"><i class="fas fa-shopping-cart"></i></a></span>
+        <!-- <span class="get-Started">
+          <a href="#"><i class="fas fa-sign-in-alt"></i> <span>Login</span></a>
+        </span> -->
 
-          <!-- <li><a href="#">Profile</a></li> -->
-          <li class="get-Started"><a href="#">Get Started</a></li>
-          <!-- <li><a href="#">Logout</a></li> -->
-        </ul>
+        <div class="avatar">
+          <img src="../img/download.png" alt="">
+          <ul class="avatar-menu show">
+            <li><a href="#">Porifle</a></li>
+            <li><a href="#">Setting</a></li>
+          </ul>
+        </div>
+
+        <!-- <ul>
+          <li class="profileBtn"><a href="#">Profile</a></li>
+        
+          <li class="get-Started">
+            <a href="#"><i class="fas fa-sign-in-alt"></i> <span>Login</span></a>
+          </li>
+          <li class="logoutBtn"><a href="#">Logout</a></li>
+        </ul> -->
       </div>
 
 
     </div>
   </header>
 
-<!-- Get Start Login and Register -->
-<div class="blur-bg-overlay"></div>
-<div class="form-popup">
+  <!-- Get Start Login and Register -->
+  <div class="blur-bg-overlay"></div>
+  <div class="form-popup">
     <span class="close-btn material-symbols-rounded">close</span>
     <div class="form-box login">
-        <div class="form-details">
-            <h2>Welcome Back</h2>
-            <p>Please log in using your personal information to stay connected with us.</p>
+      <div class="form-details">
+        <h2>Welcome Back</h2>
+        <p>Please log in using your personal information to stay connected with us.</p>
+      </div>
+      <div class="form-content">
+        <h2>LOGIN</h2>
+        <form action="#">
+          <div class="input-field">
+            <input type="text" required>
+            <label>Email</label>
+          </div>
+          <div class="input-field">
+            <input type="password" required>
+            <label>Password</label>
+          </div>
+          <a href="#" class="forgot-pass-link">Forgot password?</a>
+          <button type="submit">Log In</button>
+        </form>
+        <div class="bottom-link">
+          Don't have an account?
+          <a href="#" id="signup-link">Signup</a>
         </div>
-        <div class="form-content">
-            <h2>LOGIN</h2>
-            <form action="#">
-                <div class="input-field">
-                    <input type="text" required>
-                    <label>Email</label>
-                </div>
-                <div class="input-field">
-                    <input type="password" required>
-                    <label>Password</label>
-                </div>
-                <a href="#" class="forgot-pass-link">Forgot password?</a>
-                <button type="submit">Log In</button>
-            </form>
-            <div class="bottom-link">
-                Don't have an account?
-                <a href="#" id="signup-link">Signup</a>
-            </div>
-        </div>
+      </div>
     </div>
     <div class="form-box signup">
-        <div class="form-details">
-            <h2>Create Account</h2>
-            <p>To become a part of our community, please sign up using your personal information.</p>
-        </div>
-        <div class="form-content">
-            <h2>SIGNUP</h2>
-            <form action="#">
-                <div class="input-field">
-                    <input type="text" required>
-                    <label>Enter your email</label>
-                </div>
-                <div class="input-field">
-                    <input type="password" required>
-                    <label>Create password</label>
-                </div>
-                <div class="policy-text">
-                    <input type="checkbox" id="policy">
-                    <label for="policy">
-                        I agree the
-                        <a href="#" class="option">Terms & Conditions</a>
-                    </label>
-                </div>
-                <button type="submit">Sign Up</button>
-            </form>
-            <div class="bottom-link">
-                Already have an account? 
-                <a href="#" id="login-link">Login</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-<main>
-  <!-- Hero Slider Section -->
-  <section class="hero-slider">
-    <div class="swiper heroSwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="slide-inner" style="background-image: url('../img/portfolio/branding-1.jpg');">
-            <div class="container">
-              <div class="slide-content">
-                <h2>Welcome to EventWAW</h2>
-                <p>Discover Amazing Events in EVENTWAW</p>
-                <a href="#" class="btn-explore">Explore Events</a>
-              </div>
-            </div>
+      <div class="form-details">
+        <h2>Create Account</h2>
+        <p>To become a part of our community, please sign up using your personal information.</p>
+      </div>
+      <div class="form-content">
+        <h2>SIGNUP</h2>
+        <form action="#">
+          <div class="input-field">
+            <input type="text" required>
+            <label>Enter your email</label>
           </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="slide-inner" style="background-image: url('../img/stats-bg.jpg');">
-            <div class="container">
-              <div class="slide-content">
-                <h2>Create Your Event</h2>
-                <p>Share Your Events With the Community</p>
-                <a href="#" class="btn-explore">Add Event</a>
-              </div>
-            </div>
+          <div class="input-field">
+            <input type="password" required>
+            <label>Create password</label>
           </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="slide-inner" style="background-image: url('../img/blog/blog-4.jpg');">
-            <div class="container">
-              <div class="slide-content">
-                <h2>Join the Community</h2>
-                <p>Connect With Event Organizers</p>
-                <a href="#" class="btn-explore">Register Now</a>
-              </div>
-            </div>
+          <div class="policy-text">
+            <input type="checkbox" id="policy">
+            <label for="policy">
+              I agree the
+              <a href="#" class="option">Terms & Conditions</a>
+            </label>
           </div>
+          <button type="submit">Sign Up</button>
+        </form>
+        <div class="bottom-link">
+          Already have an account?
+          <a href="#" id="login-link">Login</a>
         </div>
       </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-pagination"></div>
     </div>
-  </section>
-  <!-- Clients Section -->
-  <section id="clients" class="clients section">
+  </div>
 
-    <div class="container" data-aos="fade-up">
 
-      <div class="row gy-4">
 
-        <div class="col-xl-2 col-md-3 col-6 client-logo">
-          <img src="../img/clients/client-1.png" class="img-fluid" alt="">
-        </div><!-- End Client Item -->
+  <main>
+    <!-- Hero Slider Section -->
+    <section class="hero-slider">
+      <div class="swiper heroSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="slide-inner" style="background-image: url('../img/portfolio/branding-1.jpg');">
+              <div class="container">
+                <div class="slide-content">
+                  <h2>Welcome to EventWAW</h2>
+                  <p>Discover Amazing Events in EVENTWAW</p>
+                  <a href="#" class="btn-explore">Explore Events</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide-inner" style="background-image: url('../img/stats-bg.jpg');">
+              <div class="container">
+                <div class="slide-content">
+                  <h2>Create Your Event</h2>
+                  <p>Share Your Events With the Community</p>
+                  <a href="#" class="btn-explore">Add Event</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide-inner" style="background-image: url('../img/blog/blog-4.jpg');">
+              <div class="container">
+                <div class="slide-content">
+                  <h2>Join the Community</h2>
+                  <p>Connect With Event Organizers</p>
+                  <a href="#" class="btn-explore">Register Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <!-- Clients Section -->
+    <section id="clients" class="clients section">
 
-        <div class="col-xl-2 col-md-3 col-6 client-logo">
-          <img src="../img/clients/client-2.png" class="img-fluid" alt="">
-        </div><!-- End Client Item -->
+      <div class="container" data-aos="fade-up">
 
-        <div class="col-xl-2 col-md-3 col-6 client-logo">
-          <img src="../img/clients/client-3.png" class="img-fluid" alt="">
-        </div><!-- End Client Item -->
+        <div class="row gy-4">
 
-        <div class="col-xl-2 col-md-3 col-6 client-logo">
-          <img src="../img/clients/client-4.png" class="img-fluid" alt="">
-        </div><!-- End Client Item -->
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="../img/clients/client-1.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
 
-        <div class="col-xl-2 col-md-3 col-6 client-logo">
-          <img src="../img/clients/client-5.png" class="img-fluid" alt="">
-        </div><!-- End Client Item -->
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="../img/clients/client-2.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
 
-        <div class="col-xl-2 col-md-3 col-6 client-logo">
-          <img src="../img/clients/client-6.png" class="img-fluid" alt="">
-        </div><!-- End Client Item -->
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="../img/clients/client-3.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="../img/clients/client-4.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="../img/clients/client-5.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="../img/clients/client-6.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+        </div>
 
       </div>
 
-    </div>
+    </section><!-- /Clients Section -->
 
-  </section><!-- /Clients Section -->
-
-<!-- upcoming events -->
-<section class="upcoming-events">
-  <div class="container">
-      <div class="section-title text-center">
+    <!-- upcoming events -->
+    <section class="upcoming-events">
+      <div class="container">
+        <div class="section-title text-center">
           <h2>Upcoming Events</h2>
           <p>Discover the latest events in EVENTWAW</p>
-      </div>
+        </div>
 
-      <div class="upcoming-events__filters">
+        <div class="upcoming-events__filters">
           <div class="upcoming-events__search">
-              <input type="text" class="upcoming-events__search-input" placeholder="Search events...">
+            <input type="text" class="upcoming-events__search-input" placeholder="Search events...">
           </div>
           <div class="upcoming-events__filter-buttons">
-              <button class="upcoming-events__filter-btn upcoming-events__filter-btn--active" data-filter="*">All</button>
-              <button class="upcoming-events__filter-btn" data-filter=".music">Music</button>
-              <button class="upcoming-events__filter-btn" data-filter=".art">Art</button>
-              <button class="upcoming-events__filter-btn" data-filter=".food">Food</button>
-              <button class="upcoming-events__filter-btn" data-filter=".sport">Sport</button>
+            <button class="upcoming-events__filter-btn upcoming-events__filter-btn--active" data-filter="*">All</button>
+            <button class="upcoming-events__filter-btn" data-filter=".music">Music</button>
+            <button class="upcoming-events__filter-btn" data-filter=".art">Art</button>
+            <button class="upcoming-events__filter-btn" data-filter=".food">Food</button>
+            <button class="upcoming-events__filter-btn" data-filter=".sport">Sport</button>
           </div>
-      </div>
+        </div>
 
-      <div class="upcoming-events__grid">
+        <div class="upcoming-events__grid">
           <!-- Event Card -->
           <div class="upcoming-events__card">
-          <div class="upcoming-events__card-image">
+            <div class="upcoming-events__card-image">
               <img src="../img/blog/blog-2.jpg" alt="Music Event">
               <div class="upcoming-events__card-date">
-              <span class="day">15</span>
-              <span class="month">Mar</span>
+                <span class="day">15</span>
+                <span class="month">Mar</span>
               </div>
-          </div>
-          <div class="upcoming-events__card-content">
+            </div>
+            <div class="upcoming-events__card-content">
               <div class="upcoming-events__card-category">Music</div>
               <h3 class="upcoming-events__card-title">Summer Music Festival</h3>
               <div class="upcoming-events__card-info">
-              <span><i class="fas fa-map-marker-alt"></i> EVENTWAW Stadium</span>
-              <span><i class="fas fa-clock"></i> 18:00</span>
+                <span><i class="fas fa-map-marker-alt"></i> EVENTWAW Stadium</span>
+                <span><i class="fas fa-clock"></i> 18:00</span>
               </div>
               <a href="#" class="upcoming-events__card-btn">View Details</a>
-          </div>
+            </div>
           </div>
           <div class="upcoming-events__card">
-          <div class="upcoming-events__card-image">
+            <div class="upcoming-events__card-image">
               <img src="../img/blog/blog-1.jpg" alt="Music Event">
               <div class="upcoming-events__card-date">
-              <span class="day">15</span>
-              <span class="month">Mar</span>
+                <span class="day">15</span>
+                <span class="month">Mar</span>
               </div>
-          </div>
-          <div class="upcoming-events__card-content">
+            </div>
+            <div class="upcoming-events__card-content">
               <div class="upcoming-events__card-category">Music</div>
               <h3 class="upcoming-events__card-title">Summer Music Festival</h3>
               <div class="upcoming-events__card-info">
-              <span><i class="fas fa-map-marker-alt"></i> EVENTWAW Stadium</span>
-              <span><i class="fas fa-clock"></i> 18:00</span>
+                <span><i class="fas fa-map-marker-alt"></i> EVENTWAW Stadium</span>
+                <span><i class="fas fa-clock"></i> 18:00</span>
               </div>
               <a href="#" class="upcoming-events__card-btn">View Details</a>
-          </div>
+            </div>
           </div>
           <div class="upcoming-events__card">
-          <div class="upcoming-events__card-image">
+            <div class="upcoming-events__card-image">
               <img src="../img/blog/blog-3.jpg" alt="Music Event">
               <div class="upcoming-events__card-date">
-              <span class="day">15</span>
-              <span class="month">Mar</span>
+                <span class="day">15</span>
+                <span class="month">Mar</span>
               </div>
-          </div>
-          <div class="upcoming-events__card-content">
+            </div>
+            <div class="upcoming-events__card-content">
               <div class="upcoming-events__card-category">Music</div>
               <h3 class="upcoming-events__card-title">Summer Music Festival</h3>
               <div class="upcoming-events__card-info">
-              <span><i class="fas fa-map-marker-alt"></i> EVENTWAW Stadium</span>
-              <span><i class="fas fa-clock"></i> 18:00</span>
+                <span><i class="fas fa-map-marker-alt"></i> EVENTWAW Stadium</span>
+                <span><i class="fas fa-clock"></i> 18:00</span>
               </div>
               <a href="#" class="upcoming-events__card-btn">View Details</a>
-          </div>
+            </div>
           </div>
           <div class="upcoming-events__card">
-          <div class="upcoming-events__card-image">
+            <div class="upcoming-events__card-image">
               <img src="../img/blog/blog-4.jpg" alt="Music Event">
               <div class="upcoming-events__card-date">
-              <span class="day">15</span>
-              <span class="month">Mar</span>
+                <span class="day">15</span>
+                <span class="month">Mar</span>
               </div>
-          </div>
-          <div class="upcoming-events__card-content">
+            </div>
+            <div class="upcoming-events__card-content">
               <div class="upcoming-events__card-category">Music</div>
               <h3 class="upcoming-events__card-title">Summer Music Festival</h3>
               <div class="upcoming-events__card-info">
-              <span><i class="fas fa-map-marker-alt"></i> EVENTWAW Stadium</span>
-              <span><i class="fas fa-clock"></i> 18:00</span>
+                <span><i class="fas fa-map-marker-alt"></i> EVENTWAW Stadium</span>
+                <span><i class="fas fa-clock"></i> 18:00</span>
               </div>
               <a href="#" class="upcoming-events__card-btn">View Details</a>
-          </div>
+            </div>
           </div>
           <div class="upcoming-events__card">
-          <div class="upcoming-events__card-image">
+            <div class="upcoming-events__card-image">
               <img src="../img/blog/blog-5.jpg" alt="Music Event">
               <div class="upcoming-events__card-date">
-              <span class="day">15</span>
-              <span class="month">Mar</span>
+                <span class="day">15</span>
+                <span class="month">Mar</span>
               </div>
-          </div>
-          <div class="upcoming-events__card-content">
+            </div>
+            <div class="upcoming-events__card-content">
               <div class="upcoming-events__card-category">Music</div>
               <h3 class="upcoming-events__card-title">Summer Music Festival</h3>
               <div class="upcoming-events__card-info">
-              <span><i class="fas fa-map-marker-alt"></i> EVENTWAW Stadium</span>
-              <span><i class="fas fa-clock"></i> 18:00</span>
+                <span><i class="fas fa-map-marker-alt"></i> EVENTWAW Stadium</span>
+                <span><i class="fas fa-clock"></i> 18:00</span>
               </div>
               <a href="#" class="upcoming-events__card-btn">View Details</a>
-          </div>
+            </div>
           </div>
           <div class="upcoming-events__card">
-          <div class="upcoming-events__card-image">
+            <div class="upcoming-events__card-image">
               <img src="../img/blog/blog-6.jpg" alt="Music Event">
               <div class="upcoming-events__card-date">
-              <span class="day">15</span>
-              <span class="month">Mar</span>
+                <span class="day">15</span>
+                <span class="month">Mar</span>
               </div>
-          </div>
-          <div class="upcoming-events__card-content">
+            </div>
+            <div class="upcoming-events__card-content">
               <div class="upcoming-events__card-category">Music</div>
               <h3 class="upcoming-events__card-title">Summer Music Festival</h3>
               <div class="upcoming-events__card-info">
-              <span><i class="fas fa-map-marker-alt"></i> EVENTWAW Stadium</span>
-              <span><i class="fas fa-clock"></i> 18:00</span>
+                <span><i class="fas fa-map-marker-alt"></i> EVENTWAW Stadium</span>
+                <span><i class="fas fa-clock"></i> 18:00</span>
               </div>
               <a href="#" class="upcoming-events__card-btn">View Details</a>
-          </div>
+            </div>
           </div>
           <div class="upcoming-events__card">
-          <div class="upcoming-events__card-image">
+            <div class="upcoming-events__card-image">
               <img src="../img/blog/blog-2.jpg" alt="Music Event">
               <div class="upcoming-events__card-date">
-              <span class="day">15</span>
-              <span class="month">Mar</span>
+                <span class="day">15</span>
+                <span class="month">Mar</span>
               </div>
-          </div>
-          <div class="upcoming-events__card-content">
+            </div>
+            <div class="upcoming-events__card-content">
               <div class="upcoming-events__card-category">Music</div>
               <h3 class="upcoming-events__card-title">Summer Music Festival</h3>
               <div class="upcoming-events__card-info">
-              <span><i class="fas fa-map-marker-alt"></i> EVENTWAW Stadium</span>
-              <span><i class="fas fa-clock"></i> 18:00</span>
+                <span><i class="fas fa-map-marker-alt"></i> EVENTWAW Stadium</span>
+                <span><i class="fas fa-clock"></i> 18:00</span>
               </div>
               <a href="#" class="upcoming-events__card-btn">View Details</a>
-          </div>
+            </div>
           </div>
           <!-- Repeat for other cards with different content -->
-      </div>
-      <!--Pagination Section -->
-  <section id="blog-pagination" class="blog-pagination section">
-  
-  <div class="container">
-    <div class="d-flex justify-content-center">
-      <ul>
-        <li><a href="#"><i class="bi bi-chevron-left"></i></a></li>
-        <li><a href="#">1</a></li>
-        <li><a href="#" class="active">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li>...</li>
-        <li><a href="#">10</a></li>
-        <li><a href="#"><i class="bi bi-chevron-right"></i></a></li>
-      </ul>
-    </div>
-  </div>
-  
-  </section><!-- / Pagination Section -->
-    </div>
-</section>
-</main>
-
-<footer id="footer" class="footer position-relative light-background">
-
-  <div class="container footer-top">
-    <div class="row gy-4">
-      <div class="col-lg-5 col-md-12 footer-about">
-        <a href="index.html" class="logo d-flex align-items-center">
-          <span class="sitename">EVENTWAW</span>
-        </a>
-        <p>Join us to discover and book the best events in EVENTWAW. From music festivals to art exhibitions, we have something for everyone. Stay updated and never miss out on the fun!</p>
-        <div class="social-links d-flex mt-4">
-          <a href=""><i class="bi bi-twitter-x"></i></a>
-          <a href=""><i class="bi bi-facebook"></i></a>
-          <a href=""><i class="bi bi-instagram"></i></a>
-          <a href=""><i class="bi bi-linkedin"></i></a>
         </div>
-      </div>
+        <!--Pagination Section -->
+        <section id="blog-pagination" class="blog-pagination section">
 
-      <div class="col-lg-2 col-6 footer-links">
-        <h4>Useful Links</h4>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About us</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Terms of service</a></li>
-          <li><a href="#">Privacy policy</a></li>
-        </ul>
-      </div>
+          <div class="container">
+            <div class="d-flex justify-content-center">
+              <ul>
+                <li><a href="#"><i class="bi bi-chevron-left"></i></a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#" class="active">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li>...</li>
+                <li><a href="#">10</a></li>
+                <li><a href="#"><i class="bi bi-chevron-right"></i></a></li>
+              </ul>
+            </div>
+          </div>
 
-      <div class="col-lg-2 col-6 footer-links">
-        <h4>Our Services</h4>
-        <ul>
-          <li><a href="#">Web Design</a></li>
-          <li><a href="#">Web Development</a></li>
-          <li><a href="#">Product Management</a></li>
-          <li><a href="#">Marketing</a></li>
-          <li><a href="#">Graphic Design</a></li>
-        </ul>
+        </section><!-- / Pagination Section -->
       </div>
+    </section>
+  </main>
 
-      <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-        <h4>Contact Us</h4>
-        <p>A108 Adam Street</p>
-        <p>New York, NY 535022</p>
-        <p>United States</p>
-        <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-        <p><strong>Email:</strong> <span>info@example.com</span></p>
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">EVENTWAW</span>
+          </a>
+          <p>Join us to discover and book the best events in EVENTWAW. From music festivals to art exhibitions, we have
+            something for everyone. Stay updated and never miss out on the fun!</p>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Product Management</a></li>
+            <li><a href="#">Marketing</a></li>
+            <li><a href="#">Graphic Design</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>A108 Adam Street</p>
+          <p>New York, NY 535022</p>
+          <p>United States</p>
+          <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+          <p><strong>Email:</strong> <span>info@example.com</span></p>
+        </div>
+
       </div>
-
     </div>
-  </div>
 
-  <div class="container copyright text-center mt-4">
-    <p>© <span>Copyright</span> <strong class="sitename">EVENTWAW</strong> <span>All Rights Reserved</span></p>
-    <div class="credits">
-    
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="sitename">EVENTWAW</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+
+      </div>
     </div>
-  </div>
 
-</footer>
+  </footer>
 
-<!-- Scroll Top -->
-<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
-<!-- Preloader -->
-<div id="preloader"></div>
+  <!-- Preloader -->
+  <div id="preloader"></div>
 
 
 
@@ -496,7 +498,9 @@
   <script src="../js/slider.js"></script>
   <script src="../js/upComingEvents.js"></script>
   <script src="../js/get-start-popup.js"></script>
-  
+  <!-- Cart -->
+  <script src="../js/floatCart.js"></script>
+
 </body>
 
 </html>

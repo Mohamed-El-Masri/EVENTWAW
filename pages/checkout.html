@@ -3,23 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EVENTWAW |</title>
-</head>
-<body>
-    
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EVENTWAW | </title>
+    <title>EVENTWAW | Checkout</title>
 
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
         rel="stylesheet">
     <!-- bootstrap -->
     <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
@@ -35,6 +24,7 @@
     <link rel="stylesheet" href="../css/GetstartPopUP.css">
     <link rel="stylesheet" href="../css/scroll-to-top.css">
     <link rel="stylesheet" href="../css/Breadcrumbs.css">
+    <link rel="stylesheet" href="../css/checkout.css">
     <!-- fontawesome -->
     <link rel="stylesheet" href="../vendor/fontawesome/css/all.min.css">
     <!-- jquery -->
@@ -185,6 +175,59 @@
         </div>
     </div>
 
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="mb-4">Checkout</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="fullName" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="fullName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Address</label>
+                        <input type="text" class="form-control" id="address" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="city" class="form-label">City</label>
+                        <input type="text" class="form-control" id="city" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="zip" class="form-label">Zip Code</label>
+                        <input type="text" class="form-control" id="zip" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="paymentMethod" class="form-label">Payment Method</label>
+                        <select class="form-control" id="paymentMethod" required>
+                            <option value="paypal">PayPal</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Place Order</button>
+                </form>
+            </div>
+            <div class="col-lg-4">
+                <h3 class="mb-4">Order Summary</h3>
+                <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span>Event Name</span>
+                        <strong>$50</strong>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span>Service Fee</span>
+                        <strong>$5</strong>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span>Total</span>
+                        <strong>$55</strong>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
 
 

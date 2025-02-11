@@ -11,6 +11,7 @@
     --default-color: #212529; /* Default color used for the majority of the text content across the entire website */
     --heading-color: #32353a; /* Color for headings, subheadings and title throughout the website */
     --accent-color: #e84545; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+    --accent-hover-color: #d73c3c; /* Hover color for elements that use the accent color */
     --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
     --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
   }
@@ -22,7 +23,7 @@
     --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
     --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
     --nav-dropdown-color: #3a3939; /* Used for navigation links of the dropdown items in the navigation menu. */
-    --nav-dropdown-hover-color: #e84545; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+    --nav-dropdown-hover-color: #d73c3c; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
   }
   
   /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */

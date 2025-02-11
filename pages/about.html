@@ -4,20 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EVENTWAW | </title>
+    <title>EVENTWAW | About Us</title>
 
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
         rel="stylesheet">
     <!-- bootstrap -->
     <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
     <!-- bootstrap icons -->
     <link rel="stylesheet" href="../vendor/bootstrap-icons/bootstrap-icons.css">
-
-    <!-- swiper js -->
-
     <!-- custom css -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/header.css">
@@ -25,6 +22,7 @@
     <link rel="stylesheet" href="../css/GetstartPopUP.css">
     <link rel="stylesheet" href="../css/scroll-to-top.css">
     <link rel="stylesheet" href="../css/Breadcrumbs.css">
+    <link rel="stylesheet" href="../css/about.css">
     <!-- fontawesome -->
     <link rel="stylesheet" href="../vendor/fontawesome/css/all.min.css">
     <!-- jquery -->
@@ -45,10 +43,10 @@
 
       <nav id="navmenu" class="navmenu navbar">
         <ul class="links">
-          <li><a href="./home.html" class="active">Home</a></li>
+          <li><a href="./home.html">Home</a></li>
           <li><a href="./Events.html">Events</a></li>
           <li><a href="./Event-details.html">Event</a></li>
-          <li><a href="./about.html">About</a></li>
+          <li><a href="./about.html" class="active">About</a></li>
           <li><a href="./contact.html">Contact</a></li>
           <li><a class="btn-addEvent me-3 " href="#">Add Event</a></li>
           <li>
@@ -154,38 +152,105 @@
     </div>
 </div>
 
+<!-- breadcrumb -->
+<div class="page-title-bar">
+    <div class="background"></div>
+    <div class="container">
+        <h1>About Us</h1>
+        <div class="breadcrumb">
+            <nav aria-label="breadcrumb">
+                <ol>
+                    <li class="item item-home"><a href="#">Home</a></li>
+                    <li class="item item-current">About</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
 
-
-
-
-
-
-    <div class="page-title-bar">
-        <div class="background"></div>
-        <div class="container">
-            <h1>LA Beach Picnic</h1>
-            <div class="breadcrumb">
-                <nav aria-label="breadcrumb">
-                    <ol>
-                        <li class="item item-home"><a href="#">Home</a></li>
-                        <li class="item"><a href="#">Events</a></li>
-                        <li class="item item-current">LA Beach Picnic</li>
-                    </ol>
-                </nav>
+<!-- About Section -->
+<section class="about-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="about-img">
+                    <img src="../img/about-us.jpg" alt="About Us">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-content">
+                    <h2>About EVENTWAW</h2>
+                    <p>EVENTWAW is your go-to platform for discovering and booking the best events around you. From music festivals to art exhibitions, we have something for everyone. Our mission is to connect people with unforgettable experiences and create a vibrant community of event enthusiasts.</p>
+                    <p>Join us and never miss out on the fun!</p>
+                    <a href="./contact.html" class="btn btn-primary">Contact Us</a>
+                </div>
             </div>
         </div>
     </div>
+</section>
 
+<!-- Team Section -->
+<section class="team-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Meet Our Team</h2>
+            <p>Our dedicated team works tirelessly to bring you the best events and experiences.</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="team-member">
+                    <img src="../img/team/team-1.jpg" alt="Team Member">
+                    <h4>John Doe</h4>
+                    <p>CEO & Founder</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="team-member">
+                    <img src="../img/team/team-2.jpg" alt="Team Member">
+                    <h4>Jane Smith</h4>
+                    <p>Marketing Head</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="team-member">
+                    <img src="../img/team/team-3.jpg" alt="Team Member">
+                    <h4>Mike Johnson</h4>
+                    <p>Event Manager</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-
-
-
-
-
-
-
-
-
+<!-- Clients Section -->
+<section class="clients-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Clients</h2>
+            <p>We are proud to work with some of the best brands and organizations.</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-2 col-md-4 col-6">
+                <img src="../img/clients/client-1.png" class="img-fluid" alt="Client">
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+                <img src="../img/clients/client-2.png" class="img-fluid" alt="Client">
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+                <img src="../img/clients/client-3.png" class="img-fluid" alt="Client">
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+                <img src="../img/clients/client-4.png" class="img-fluid" alt="Client">
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+                <img src="../img/clients/client-5.png" class="img-fluid" alt="Client">
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+                <img src="../img/clients/client-6.png" class="img-fluid" alt="Client">
+            </div>
+        </div>
+    </div>
+</section>
 
  
 <footer id="footer" class="footer position-relative light-background">
