@@ -1,0 +1,176 @@
+{
+    "tickets": {
+        "upcoming": [
+            {
+                "id": 1,
+                "title": "Summer Music Festival",
+                "date": {
+                    "day": "15",
+                    "month": "JUL"
+                },
+                "time": "7:00 PM",
+                "location": "Central Park",
+                "status": "Upcoming",
+                "image": "../img/blog/blog-4.jpg"
+            },
+            {
+                "id": 2,
+                "status": "Upcoming",
+                "title": "Modern Art Exhibition",
+                "date": { "day": "20", "month": "JUL" },
+                "time": "10:00 AM",
+                "location": "Art Gallery",
+                "image": "../img/blog/blog-3.jpg"
+            },
+            {
+                "id": 3,
+                "status": "Upcoming",
+                "title": "International Food Festival",
+                "date": { "day": "25", "month": "JUL" },
+                "time": "12:00 PM",
+                "location": "City Square",
+                "image": "../img/blog/blog-1.jpg"
+            },
+            {
+                "id": 7,
+                "status": "Upcoming",
+                "title": "Jazz Night",
+                "date": { "day": "30", "month": "JUL" },
+                "time": "8:00 PM",
+                "location": "Jazz Club",
+                "image": "../img/blog/blog-2.jpg"
+            },
+            {
+                "id": 8,
+                "status": "Upcoming",
+                "title": "Book Fair",
+                "date": { "day": "05", "month": "AUG" },
+                "time": "9:00 AM",
+                "location": "Library",
+                "image": "../img/blog/blog-3.jpg"
+            },
+            {
+                "id": 9,
+                "status": "Upcoming",
+                "title": "Film Festival",
+                "date": { "day": "10", "month": "AUG" },
+                "time": "6:00 PM",
+                "location": "Cinema Hall",
+                "image": "../img/blog/blog-4.jpg"
+            }
+        ],
+        "past": [
+            {
+                "id": 4,
+                "title": "Tech Conference 2023",
+                "date": {
+                    "day": "10",
+                    "month": "DEC"
+                },
+                "time": "9:00 AM",
+                "location": "Convention Center",
+                "status": "Completed",
+                "image": "../img/blog/blog-2.jpg"
+            },
+            {
+                "id": 5,
+                "status": "Completed",
+                "title": "Winter Music Concert",
+                "date": { "day": "05", "month": "DEC" },
+                "time": "8:00 PM",
+                "location": "Music Hall",
+                "image": "../img/blog/blog-1.jpg"
+            },
+            {
+                "id": 6,
+                "status": "Completed",
+                "title": "Digital Art Show",
+                "date": { "day": "01", "month": "DEC" },
+                "time": "11:00 AM",
+                "location": "Digital Museum",
+                "image": "../img/blog/blog-3.jpg"
+            },
+            {
+                "id": 10,
+                "status": "Completed",
+                "title": "Spring Carnival",
+                "date": { "day": "15", "month": "MAR" },
+                "time": "2:00 PM",
+                "location": "Main Street",
+                "image": "../img/blog/blog-4.jpg"
+            },
+            {
+                "id": 11,
+                "status": "Completed",
+                "title": "Science Fair",
+                "date": { "day": "20", "month": "MAR" },
+                "time": "10:00 AM",
+                "location": "Community Center",
+                "image": "../img/blog/blog-2.jpg"
+            },
+            {
+                "id": 12,
+                "status": "Completed",
+                "title": "Charity Run",
+                "date": { "day": "25", "month": "MAR" },
+                "time": "7:00 AM",
+                "location": "City Park",
+                "image": "../img/blog/blog-1.jpg"
+            },
+            {
+                "id": 13,
+                "status": "Completed",
+                "title": "Fashion Show",
+                "date": { "day": "30", "month": "MAR" },
+                "time": "5:00 PM",
+                "location": "Fashion Hall",
+                "image": "../img/blog/blog-3.jpg"
+            },
+            {
+                "id": 14,
+                "status": "Completed",
+                "title": "Food Truck Festival",
+                "date": { "day": "05", "month": "APR" },
+                "time": "12:00 PM",
+                "location": "Downtown",
+                "image": "../img/blog/blog-4.jpg"
+            },
+            {
+                "id": 15,
+                "status": "Completed",
+                "title": "Marathon",
+                "date": { "day": "10", "month": "APR" },
+                "time": "6:00 AM",
+                "location": "City Streets",
+                "image": "../img/blog/blog-2.jpg"
+            },
+            {
+                "id": 16,
+                "status": "Completed",
+                "title": "Theater Play",
+                "date": { "day": "15", "month": "APR" },
+                "time": "7:00 PM",
+                "location": "Theater",
+                "image": "../img/blog/blog-1.jpg"
+            },
+            {
+                "id": 17,
+                "status": "Completed",
+                "title": "Rock Concert",
+                "date": { "day": "20", "month": "APR" },
+                "time": "9:00 PM",
+                "location": "Stadium",
+                "image": "../img/blog/blog-3.jpg"
+            },
+            {
+                "id": 18,
+                "status": "Completed",
+                "title": "Art Workshop",
+                "date": { "day": "25", "month": "APR" },
+                "time": "11:00 AM",
+                "location": "Art Studio",
+                "image": "../img/blog/blog-4.jpg"
+            }
+        ]
+    }
+}

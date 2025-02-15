@@ -60,37 +60,43 @@
 .breadcrumb ol {
   list-style: none;
   padding: 0;
-  margin: 0 -5px;
+  margin: 0;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
 
-
 .breadcrumb .item {
-  padding: 0 5px;
-  display: flex;
-  align-items: center;
-  word-break: break-word;
+  color: var(--contrast-color);
+  padding: 0;
+  font-size: 14px;
+  position: relative;
+}
+
+.breadcrumb .item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.breadcrumb .item:not(:last-child):after {
+  content: ">";
+  margin-left: 10px;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .breadcrumb .item a {
-  color: #FFFFFF;
+  color: rgba(255, 255, 255, 0.7);
+  transition: 0.3s;
   text-decoration: none;
-  font-size: 1.5vw;
-  background-color: transparent;
-  transition: 0.2s;
-
 }
 
 .breadcrumb .item a:hover {
-  color: tomato;
+  color: var(--contrast-color);
+  text-decoration: underline;
 }
 
 .breadcrumb .item-current {
-  color: tomato;
-  font-size: 1.5vw;
-  text-decoration: underline;
+  color: var(--contrast-color);
+  pointer-events: none;
 }
 
 @media (max-width: 768px) {

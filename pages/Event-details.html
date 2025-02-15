@@ -5,7 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EVENTWAW | </title>
-
+    <!-- Add these meta tags in the head section -->
+    <meta name="description" content="Event details for LA Beach Picnic - Join us for an amazing experience!">
+    <meta name="keywords" content="event, beach picnic, LA, music festival, concert">
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="preconnect" href="https://maps.googleapis.com">
+    <link rel="dns-prefetch" href="https://maps.googleapis.com">
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
     <link
@@ -26,6 +32,8 @@
     <link rel="stylesheet" href="../css/scroll-to-top.css">
     <link rel="stylesheet" href="../css/Breadcrumbs.css">
     <link rel="stylesheet" href="../css/Event-details.css">
+    <link rel="stylesheet" href="../css/floatCart.css">
+    <link rel="stylesheet" href="../css/scroll-animations.css">
     <!-- fontawesome -->
     <link rel="stylesheet" href="../vendor/fontawesome/css/all.min.css">
     <!-- jquery -->
@@ -34,128 +42,15 @@
 </head>
 
 <body>
-
     <header id="header" class="header d-flex align-items-center fixed-top">
-        <div class="container position-relative d-flex align-items-center justify-content-between">
-
-            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-                <!-- Uncomment the line below if you also wish to use an image logo -->
-                <!-- <img src="assets/img/logo.png" alt=""> -->
-                <h1 class="sitename">EVENTWAW</h1><span>.</span>
-            </a>
-
-            <nav id="navmenu" class="navmenu navbar">
-                <ul class="links">
-                    <li><a href="./home.html" class="active">Home</a></li>
-                    <li><a href="./Events.html">Events</a></li>
-                    <li><a href="./Event-details.html">Event</a></li>
-                    <li><a href="./about.html">About</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                    <li><a class="btn-addEvent me-3 " href="#">Add Event</a></li>
-                    <li>
-                        <div class="search-bar">
-                            <i class="fas fa-search"></i>
-                            <input type="text" placeholder="Search for events...">
-                        </div>
-                    </li>
-                    <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li> -->
-                </ul>
-
-                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-            </nav>
-            <div class="register-login-logut-profile">
-
-                <ul>
-
-                    <!-- <li><a href="#">Profile</a></li> -->
-                    <li class="get-Started"><a href="#">Get Started</a></li>
-                    <!-- <li><a href="#">Logout</a></li> -->
-                </ul>
-            </div>
-
-
-        </div>
+   
     </header>
-
+  
     <!-- Get Start Login and Register -->
     <div class="blur-bg-overlay"></div>
-    <div class="form-popup">
-        <span class="close-btn material-symbols-rounded">close</span>
-        <div class="form-box login">
-            <div class="form-details">
-                <h2>Welcome Back</h2>
-                <p>Please log in using your personal information to stay connected with us.</p>
-            </div>
-            <div class="form-content">
-                <h2>LOGIN</h2>
-                <form action="#">
-                    <div class="input-field">
-                        <input type="text" required>
-                        <label>Email</label>
-                    </div>
-                    <div class="input-field">
-                        <input type="password" required>
-                        <label>Password</label>
-                    </div>
-                    <a href="#" class="forgot-pass-link">Forgot password?</a>
-                    <button type="submit">Log In</button>
-                </form>
-                <div class="bottom-link">
-                    Don't have an account?
-                    <a href="#" id="signup-link">Signup</a>
-                </div>
-            </div>
-        </div>
-        <div class="form-box signup">
-            <div class="form-details">
-                <h2>Create Account</h2>
-                <p>To become a part of our community, please sign up using your personal information.</p>
-            </div>
-            <div class="form-content">
-                <h2>SIGNUP</h2>
-                <form action="#">
-                    <div class="input-field">
-                        <input type="text" required>
-                        <label>Enter your email</label>
-                    </div>
-                    <div class="input-field">
-                        <input type="password" required>
-                        <label>Create password</label>
-                    </div>
-                    <div class="policy-text">
-                        <input type="checkbox" id="policy">
-                        <label for="policy">
-                            I agree the
-                            <a href="#" class="option">Terms & Conditions</a>
-                        </label>
-                    </div>
-                    <button type="submit">Sign Up</button>
-                </form>
-                <div class="bottom-link">
-                    Already have an account?
-                    <a href="#" id="login-link">Login</a>
-                </div>
-            </div>
-        </div>
+    <div class="form-popup" id="getStartPopup">
+     
     </div>
-
-
 
 
 
@@ -180,7 +75,7 @@
     <!-- body -->
     <div class="eventbody">
         <main>
-            <div class="eventMAinContent">
+            <div class="eventMAinContent scroll-animate" data-animation="fade-up">
                 <img src="../img/blog/blog-4.jpg" alt="eventImg">
                 <p class="eventDiscription">
 
@@ -207,7 +102,7 @@
                 </div>
             </div>
 
-            <div class="event-section-tabs">
+            <div class="event-section-tabs scroll-animate" data-animation="fade-up" data-delay="200">
                 <ul class="event-section-tabs-nav">
                     <li class="event-section-tab active" data-tab="event-speakers">Speakers</li>
                     <li class="event-section-tab" data-tab="event-schedule">Schedule</li>
@@ -280,7 +175,8 @@
                                     <div class="time">11:30 AM</div>
                                     <div class="details">
                                         <h5>Panel Discussion</h5>
-                                        <p>Panel discussion with industry experts on the latest trends in music festivals.</p>
+                                        <p>Panel discussion with industry experts on the latest trends in music
+                                            festivals.</p>
                                     </div>
                                 </div>
                                 <div class="schedule-item">
@@ -372,44 +268,55 @@
                                 });
                             }
                         </script>
-                        <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+                        <script async defer
+                            src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
                     </div>
                     <div id="event-faq" class="tab-content">
                         <h3>Event FAQ</h3>
                         <div class="accordion" id="faqAccordion">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                         What is the dress code for the event?
                                     </button>
                                 </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
                                     <div class="accordion-body">
-                                        We recommend casual attire. Feel free to wear comfortable clothing suitable for outdoor activities.
+                                        We recommend casual attire. Feel free to wear comfortable clothing suitable for
+                                        outdoor activities.
                                     </div>
                                 </div>
                             </div>
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                         Are there any age restrictions?
                                     </button>
                                 </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#faqAccordion">
                                     <div class="accordion-body">
-                                        The event is open to all ages. However, attendees under 18 must be accompanied by an adult.
+                                        The event is open to all ages. However, attendees under 18 must be accompanied
+                                        by an adult.
                                     </div>
                                 </div>
                             </div>
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
                                         Will food and drinks be available?
                                     </button>
                                 </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
                                     <div class="accordion-body">
-                                        Yes, there will be a variety of food and beverage options available for purchase at the venue.
+                                        Yes, there will be a variety of food and beverage options available for purchase
+                                        at the venue.
                                     </div>
                                 </div>
                             </div>
@@ -451,10 +358,10 @@
                 </div>
             </div>
         </main>
-        <aside>
+        <aside class="scroll-animate" data-animation="fade-left" data-delay="300">
             <div class="eventDetails">
                 <h2>Event Details</h2>
-                
+
                 <div class="detail-item">
                     <i class="bi bi-calendar3"></i>
                     <div class="detail-content">
@@ -462,7 +369,7 @@
                         <p class="value">July 24, 2023</p>
                     </div>
                 </div>
-            
+
                 <div class="detail-item">
                     <i class="bi bi-calendar3"></i>
                     <div class="detail-content">
@@ -470,7 +377,7 @@
                         <p class="value">July 25, 2023</p>
                     </div>
                 </div>
-            
+
                 <div class="detail-item">
                     <i class="bi bi-clock"></i>
                     <div class="detail-content">
@@ -478,7 +385,7 @@
                         <p class="value">09:00 AM</p>
                     </div>
                 </div>
-            
+
                 <div class="detail-item">
                     <i class="bi bi-geo-alt"></i>
                     <div class="detail-content">
@@ -486,7 +393,7 @@
                         <p class="value">Los Angeles, CA</p>
                     </div>
                 </div>
-            
+
                 <div class="detail-item">
                     <i class="bi bi-building"></i>
                     <div class="detail-content">
@@ -494,7 +401,7 @@
                         <p class="value">LA Convention Center</p>
                     </div>
                 </div>
-            
+
                 <div class="detail-item">
                     <i class="bi bi-tag"></i>
                     <div class="detail-content">
@@ -502,7 +409,7 @@
                         <p class="value">$99.00</p>
                     </div>
                 </div>
-            
+
                 <div class="detail-item">
                     <i class="bi bi-person"></i>
                     <div class="detail-content">
@@ -510,7 +417,7 @@
                         <p class="value">EventWAW Team</p>
                     </div>
                 </div>
-            
+
                 <div class="detail-item">
                     <i class="bi bi-grid"></i>
                     <div class="detail-content">
@@ -518,7 +425,7 @@
                         <p class="value">Music Festival</p>
                     </div>
                 </div>
-            
+
                 <div class="detail-item">
                     <i class="bi bi-geo"></i>
                     <div class="detail-content">
@@ -526,7 +433,7 @@
                         <p class="value">1201 S Figueroa St, Los Angeles</p>
                     </div>
                 </div>
-            
+
                 <div class="detail-item">
                     <i class="bi bi-telephone"></i>
                     <div class="detail-content">
@@ -534,7 +441,7 @@
                         <p class="value">+1 (213) 555-1234</p>
                     </div>
                 </div>
-            
+
                 <div class="detail-item">
                     <i class="bi bi-envelope"></i>
                     <div class="detail-content">
@@ -542,7 +449,7 @@
                         <p class="value">contact@eventwaw.com</p>
                     </div>
                 </div>
-            
+
                 <div class="detail-item">
                     <i class="bi bi-ticket"></i>
                     <div class="detail-content">
@@ -550,7 +457,7 @@
                         <p class="value">145</p>
                     </div>
                 </div>
-            
+
                 <button class="calendar-btn">
                     <i class="bi bi-calendar-plus"></i>
                     Add to Calendar
@@ -623,66 +530,7 @@
 
     </div>
 
-
-
-
-
-
-
-
-
-
     <footer id="footer" class="footer position-relative light-background">
-
-        <div class="container footer-top">
-            <div class="row gy-4">
-                <div class="col-lg-5 col-md-12 footer-about">
-                    <a href="index.html" class="logo d-flex align-items-center">
-                        <span class="sitename">EVENTWAW</span>
-                    </a>
-                    <p>Join us to discover and book the best events in EVENTWAW. From music festivals to art
-                        exhibitions, we have something for everyone. Stay updated and never miss out on the fun!</p>
-                    <div class="social-links d-flex mt-4">
-                        <a href=""><i class="bi bi-twitter-x"></i></a>
-                        <a href=""><i class="bi bi-facebook"></i></a>
-                        <a href=""><i class="bi bi-instagram"></i></a>
-                        <a href=""><i class="bi bi-linkedin"></i></a>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 col-6 footer-links">
-                    <h4>Useful Links</h4>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Terms of service</a></li>
-                        <li><a href="#">Privacy policy</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-2 col-6 footer-links">
-                    <h4>Our Services</h4>
-                    <ul>
-                        <li><a href="#">Web Design</a></li>
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">Product Management</a></li>
-                        <li><a href="#">Marketing</a></li>
-                        <li><a href="#">Graphic Design</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-                    <h4>Contact Us</h4>
-                    <p>A108 Adam Street</p>
-                    <p>New York, NY 535022</p>
-                    <p>United States</p>
-                    <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-                    <p><strong>Email:</strong> <span>info@example.com</span></p>
-                </div>
-
-            </div>
-        </div>
 
         <div class="container copyright text-center mt-4">
             <p>© <span>Copyright</span> <strong class="sitename">EVENTWAW</strong> <span>All Rights Reserved</span></p>
@@ -703,16 +551,29 @@
 
 
 
-
+    <script src="../js/component.js"></script>
+    
     <!-- bootstrap -->
     <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
     <!-- swiper js -->
 
     <!-- custom js -->
+     <script src="../js/event-details.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/get-start-popup.js"></script>
     <script src="../js/eventTabs.js"></script>
     <script src="../js/calendar.js"></script>
+    <script src="../js/floatCart.js"></script>
+    <script src="../js/scroll-animations.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+    </script>
 
 </body>
 

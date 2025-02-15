@@ -37,9 +37,9 @@
 
 .floating_cart_container {  
     position: fixed;  
-    right: -400px; /* Start off the screen */  
+    right: -400px; /* Start off screen */  
     top: 120px;  
-    width: 400px; /* Increased width for a better layout */  
+    width: 400px;
     max-height: 80vh;  
     background: var(--surface-color);  
     border: 1px solid #ccc;  
@@ -47,8 +47,16 @@
     border-radius: 10px;  
     z-index: 1000;  
     transition: right 0.3s ease;  
-    overflow-y: auto; /* Enable scrolling */  
+    overflow-y: auto;
+    visibility: hidden; /* Hide by default */
+    opacity: 0; /* Start fully transparent */
 }  
+
+.floating_cart_container.active {
+    right: 20px;
+    visibility: visible;
+    opacity: 1;
+}
 
 .floating_cart_header {  
     padding: 15px;  
@@ -65,6 +73,42 @@
     padding: 15px;  
     background: var(--background-color);  
 }  
+
+.floating_cart_body.loading {
+    position: relative;
+    filter: blur(4px);
+    pointer-events: none;
+}
+
+.floating_cart_body.loading::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.floating_cart_body.loading::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border: 3px solid var(--accent-color);
+    border-top-color: transparent;
+    border-radius: 50%;
+    z-index: 10;
+    animation: cartSpin 1s linear infinite;
+}
+
+@keyframes cartSpin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
 
 .floating_cart_footer {  
     padding: 15px;  
@@ -207,12 +251,34 @@
 /* Responsive styles */  
 @media screen and (max-width: 768px) {  
     .floating_cart_container {  
-        width: 90%; /* Responsive width */  
-        right: -10px; /* Slightly show from right for mobile */  
-    }  
+        width: 85%;
+        right: -100%; /* Move completely off screen */
+        top: 0;
+        height: 100vh; /* Full height on mobile */
+        max-height: 100vh;
+        position: fixed;
+        margin: 0;
+        border-radius: 0;
+    }
 
-    .cart_icon {  
-        padding: 8px;  
-        font-size: 16px;  
-    }  
+    .floating_cart_container.active {
+        right: 0; /* Slide in from right */
+    }
+
+    .floating_cart_header {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    .floating_cart_footer {
+        position: sticky;
+        bottom: 0;
+        background: var(--surface-color);
+        z-index: 1;
+    }
+
+    body.cart-open {
+        overflow: hidden; /* Prevent scrolling when cart is open */
+    }
 }

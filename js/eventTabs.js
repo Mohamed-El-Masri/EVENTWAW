@@ -23,3 +23,46 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize first tab
     if (tabs.length) switchTab(tabs[0]);
 });
+
+function initMap() {
+    const location = { lat: 34.0522, lng: -118.2437 };
+    const mapOptions = {
+        zoom: 14,
+        center: location,
+        styles: [
+            {
+                "featureType": "all",
+                "elementType": "geometry.fill",
+                "stylers": [{ "weight": "2.00" }]
+            },
+            {
+                "featureType": "all",
+                "elementType": "geometry.stroke",
+                "stylers": [{ "color": "#9c9c9c" }]
+            }
+            // Add more styles as needed
+        ]
+    };
+    
+    const map = new google.maps.Map(document.getElementById('map'), mapOptions);
+    
+    const marker = new google.maps.Marker({
+        position: location,
+        map: map,
+        title: 'Event Location',
+        animation: google.maps.Animation.DROP
+    });
+
+    const infoWindow = new google.maps.InfoWindow({
+        content: `
+            <div class="map-info-window">
+                <h5>LA Convention Center</h5>
+                <p>1201 S Figueroa St, Los Angeles</p>
+            </div>
+        `
+    });
+
+    marker.addListener('click', () => {
+        infoWindow.open(map, marker);
+    });
+}

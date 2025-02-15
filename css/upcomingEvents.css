@@ -228,3 +228,221 @@
         font-size: 0.85rem;  
     }  
 }
+
+.events-grid {
+    display: grid;
+    gap: var(--grid-gap, 25px);
+    margin-bottom: 30px;
+}
+
+.event-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+.event-image {
+    position: relative;
+    height: 200px;
+}
+
+.event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.event-date {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Enhanced Pagination Styles */
+.blog-pagination {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.blog-pagination ul {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+.blog-pagination ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: 40px;
+    padding: 0 15px;
+    background: #fff;
+    border: 2px solid var(--accent-color);
+    border-radius: 20px;
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.blog-pagination ul li a:hover,
+.blog-pagination ul li a.active {
+    background: var(--accent-color);
+    color: white;
+}
+
+.blog-pagination .load-more {
+    min-width: 120px;
+}
+
+/* Responsive Design */
+@media (min-width: 1200px) {
+    .events-grid { 
+        grid-template-columns: repeat(3, 1fr); 
+        max-width: 1200px;
+        margin: 0 auto 30px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .events-grid { 
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 900px;
+        margin: 0 auto 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .events-grid {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        margin: 0 auto 30px;
+    }
+
+    .event-image {
+        height: 250px;
+    }
+}
+
+/* Skeleton Loading Animation */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.card-skeleton {
+    background: #f6f7f8;
+    background-image: linear-gradient(
+        to right,
+        #f6f7f8 0%,
+        #edeef1 20%,
+        #f6f7f8 40%,
+        #f6f7f8 100%
+    );
+    background-repeat: no-repeat;
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite linear;
+}
+
+.upcoming-events__card.loading {
+    pointer-events: none;
+}
+
+.upcoming-events__card.loading .upcoming-events__card-image {
+    height: 200px;
+    background: #eee;
+}
+
+.upcoming-events__card.loading .upcoming-events__card-content {
+    position: relative;
+    overflow: hidden;
+}
+
+.upcoming-events__card.loading .upcoming-events__card-title,
+.upcoming-events__card.loading .upcoming-events__card-category,
+.upcoming-events__card.loading .upcoming-events__card-info span,
+.upcoming-events__card.loading .upcoming-events__card-btn {
+    height: 20px;
+    margin: 10px 0;
+    background: #eee;
+    border-radius: 4px;
+}
+
+.upcoming-events__card.loading .upcoming-events__card-title {
+    height: 28px;
+    width: 80%;
+}
+
+.upcoming-events__card.loading .upcoming-events__card-category {
+    width: 40%;
+}
+
+.upcoming-events__card.loading .upcoming-events__card-info span {
+    width: 60%;
+}
+
+/* Image Loading Optimization */
+.upcoming-events__card-image {
+    position: relative;
+    background: #eee;
+    overflow: hidden;
+}
+
+.upcoming-events__card-image img {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.upcoming-events__card-image img.loaded {
+    opacity: 1;
+}
+
+.upcoming-events__card-image.error::after {
+    content: '\f1c5';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: #666;
+}
+
+/* Progressive Loading */
+.blur-load {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.blur-load::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    animation: pulse 2.5s infinite;
+    background: #f6f7f8;
+}
+
+@keyframes pulse {
+    0% { opacity: 0; }
+    50% { opacity: 0.1; }
+    100% { opacity: 0; }
+}

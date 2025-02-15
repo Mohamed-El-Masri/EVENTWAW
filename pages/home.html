@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
     rel="stylesheet">
   <!-- bootstrap -->
   <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="../css/scroll-to-top.css">
   <link rel="stylesheet" href="../css/pagination.css">
   <link rel="stylesheet" href="../css/floatCart.css">
-
+  <link rel="stylesheet" href="../css/scroll-animations.css">
   <!-- fontawesome -->
   <link rel="stylesheet" href="../vendor/fontawesome/css/all.min.css">
   <!-- jquery -->
@@ -42,122 +42,13 @@
 <body>
 
   <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">EVENTWAW</h1><span>.</span>
-      </a>
-
-      <nav id="navmenu" class="navmenu navbar">
-        <ul class="links">
-          <li><a href="./home.html" class="active">Home</a></li>
-          <li><a href="./Events.html">Events</a></li>
-          <li><a href="./Event-details.html">Event</a></li>
-          <li><a href="./about.html">About</a></li>
-          <li><a href="./contact.html">Contact</a></li>
-          <li><a class="btn-addEvent me-3 " href="#">Add Event</a></li>
-          <li>
-            <div class="search-bar">
-              <i class="fas fa-search"></i>
-              <input type="text" placeholder="Search for events...">
-            </div>
-          </li>
-
-        </ul>
-
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-      <div class="register-login-logut-profile ">
-
-        <span class="cartIcon" onclick="toggleCart()"><a href="#"><i class="fas fa-shopping-cart"></i></a></span>
-        <!-- <span class="get-Started">
-          <a href="#"><i class="fas fa-sign-in-alt"></i> <span>Login</span></a>
-        </span> -->
-
-        <div class="avatar">
-          <img src="../img/download.png" alt="">
-          <ul class="avatar-menu show">
-            <li><a href="#">Porifle</a></li>
-            <li><a href="#">Setting</a></li>
-          </ul>
-        </div>
-
-        <!-- <ul>
-          <li class="profileBtn"><a href="#">Profile</a></li>
-        
-          <li class="get-Started">
-            <a href="#"><i class="fas fa-sign-in-alt"></i> <span>Login</span></a>
-          </li>
-          <li class="logoutBtn"><a href="#">Logout</a></li>
-        </ul> -->
-      </div>
-
-
-    </div>
+   
   </header>
 
   <!-- Get Start Login and Register -->
   <div class="blur-bg-overlay"></div>
-  <div class="form-popup">
-    <span class="close-btn material-symbols-rounded">close</span>
-    <div class="form-box login">
-      <div class="form-details">
-        <h2>Welcome Back</h2>
-        <p>Please log in using your personal information to stay connected with us.</p>
-      </div>
-      <div class="form-content">
-        <h2>LOGIN</h2>
-        <form action="#">
-          <div class="input-field">
-            <input type="text" required>
-            <label>Email</label>
-          </div>
-          <div class="input-field">
-            <input type="password" required>
-            <label>Password</label>
-          </div>
-          <a href="#" class="forgot-pass-link">Forgot password?</a>
-          <button type="submit">Log In</button>
-        </form>
-        <div class="bottom-link">
-          Don't have an account?
-          <a href="#" id="signup-link">Signup</a>
-        </div>
-      </div>
-    </div>
-    <div class="form-box signup">
-      <div class="form-details">
-        <h2>Create Account</h2>
-        <p>To become a part of our community, please sign up using your personal information.</p>
-      </div>
-      <div class="form-content">
-        <h2>SIGNUP</h2>
-        <form action="#">
-          <div class="input-field">
-            <input type="text" required>
-            <label>Enter your email</label>
-          </div>
-          <div class="input-field">
-            <input type="password" required>
-            <label>Create password</label>
-          </div>
-          <div class="policy-text">
-            <input type="checkbox" id="policy">
-            <label for="policy">
-              I agree the
-              <a href="#" class="option">Terms & Conditions</a>
-            </label>
-          </div>
-          <button type="submit">Sign Up</button>
-        </form>
-        <div class="bottom-link">
-          Already have an account?
-          <a href="#" id="login-link">Login</a>
-        </div>
-      </div>
-    </div>
+  <div class="form-popup" id="getStartPopup">
+   
   </div>
 
 
@@ -213,27 +104,27 @@
 
         <div class="row gy-4">
 
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
+          <div class="col-xl-2 col-md-3 col-6 client-logo scroll-animate" data-animation="fade-up" data-delay="100">
             <img src="../img/clients/client-1.png" class="img-fluid" alt="">
           </div><!-- End Client Item -->
 
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
+          <div class="col-xl-2 col-md-3 col-6 client-logo scroll-animate" data-animation="fade-up" data-delay="200">
             <img src="../img/clients/client-2.png" class="img-fluid" alt="">
           </div><!-- End Client Item -->
 
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
+          <div class="col-xl-2 col-md-3 col-6 client-logo scroll-animate" data-animation="fade-up" data-delay="300">
             <img src="../img/clients/client-3.png" class="img-fluid" alt="">
           </div><!-- End Client Item -->
 
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
+          <div class="col-xl-2 col-md-3 col-6 client-logo scroll-animate" data-animation="fade-up" data-delay="400">
             <img src="../img/clients/client-4.png" class="img-fluid" alt="">
           </div><!-- End Client Item -->
 
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
+          <div class="col-xl-2 col-md-3 col-6 client-logo scroll-animate" data-animation="fade-up" data-delay="500">
             <img src="../img/clients/client-5.png" class="img-fluid" alt="">
           </div><!-- End Client Item -->
 
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
+          <div class="col-xl-2 col-md-3 col-6 client-logo scroll-animate" data-animation="fade-up" data-delay="600">
             <img src="../img/clients/client-6.png" class="img-fluid" alt="">
           </div><!-- End Client Item -->
 
@@ -246,236 +137,65 @@
     <!-- upcoming events -->
     <section class="upcoming-events">
       <div class="container">
-        <div class="section-title text-center">
+        <div class="section-title text-center scroll-animate" data-animation="fade-down">
           <h2>Upcoming Events</h2>
-          <p>Discover the latest events in EVENTWAW</p>
+          <p class="scroll-animate" data-animation="fade-up" data-delay="200">
+            Discover the latest events in EVENTWAW
+          </p>
         </div>
 
-        <div class="upcoming-events__filters">
+        <div class="upcoming-events__filters scroll-animate" data-animation="fade-left">
           <div class="upcoming-events__search">
             <input type="text" class="upcoming-events__search-input" placeholder="Search events...">
           </div>
           <div class="upcoming-events__filter-buttons">
-            <button class="upcoming-events__filter-btn upcoming-events__filter-btn--active" data-filter="*">All</button>
-            <button class="upcoming-events__filter-btn" data-filter=".music">Music</button>
-            <button class="upcoming-events__filter-btn" data-filter=".art">Art</button>
-            <button class="upcoming-events__filter-btn" data-filter=".food">Food</button>
-            <button class="upcoming-events__filter-btn" data-filter=".sport">Sport</button>
+            <button class="upcoming-events__filter-btn upcoming-events__filter-btn--active scroll-animate" 
+                    data-animation="fade-left" 
+                    data-delay="100" 
+                    data-filter="*">All</button>
+            <button class="upcoming-events__filter-btn scroll-animate" 
+                    data-animation="fade-left" 
+                    data-delay="200" 
+                    data-filter=".music">Music</button>
+            <button class="upcoming-events__filter-btn scroll-animate" 
+                    data-animation="fade-left" 
+                    data-delay="300" 
+                    data-filter=".art">Art</button>
+            <button class="upcoming-events__filter-btn scroll-animate" 
+                    data-animation="fade-left" 
+                    data-delay="400" 
+                    data-filter=".food">Food</button>
+            <button class="upcoming-events__filter-btn scroll-animate" 
+                    data-animation="fade-left" 
+                    data-delay="500" 
+                    data-filter=".sport">Sport</button>
           </div>
         </div>
 
+        <!-- Event Cards Grid - Will be populated by JavaScript -->
         <div class="upcoming-events__grid">
-          <!-- Event Card -->
-          <div class="upcoming-events__card">
-            <div class="upcoming-events__card-image">
-              <img src="../img/blog/blog-2.jpg" alt="Music Event">
-              <div class="upcoming-events__card-date">
-                <span class="day">15</span>
-                <span class="month">Mar</span>
-              </div>
-            </div>
-            <div class="upcoming-events__card-content">
-              <div class="upcoming-events__card-category">Music</div>
-              <h3 class="upcoming-events__card-title">Summer Music Festival</h3>
-              <div class="upcoming-events__card-info">
-                <span><i class="fas fa-map-marker-alt"></i> EVENTWAW Stadium</span>
-                <span><i class="fas fa-clock"></i> 18:00</span>
-              </div>
-              <a href="#" class="upcoming-events__card-btn">View Details</a>
-            </div>
-          </div>
-          <div class="upcoming-events__card">
-            <div class="upcoming-events__card-image">
-              <img src="../img/blog/blog-1.jpg" alt="Music Event">
-              <div class="upcoming-events__card-date">
-                <span class="day">15</span>
-                <span class="month">Mar</span>
-              </div>
-            </div>
-            <div class="upcoming-events__card-content">
-              <div class="upcoming-events__card-category">Music</div>
-              <h3 class="upcoming-events__card-title">Summer Music Festival</h3>
-              <div class="upcoming-events__card-info">
-                <span><i class="fas fa-map-marker-alt"></i> EVENTWAW Stadium</span>
-                <span><i class="fas fa-clock"></i> 18:00</span>
-              </div>
-              <a href="#" class="upcoming-events__card-btn">View Details</a>
-            </div>
-          </div>
-          <div class="upcoming-events__card">
-            <div class="upcoming-events__card-image">
-              <img src="../img/blog/blog-3.jpg" alt="Music Event">
-              <div class="upcoming-events__card-date">
-                <span class="day">15</span>
-                <span class="month">Mar</span>
-              </div>
-            </div>
-            <div class="upcoming-events__card-content">
-              <div class="upcoming-events__card-category">Music</div>
-              <h3 class="upcoming-events__card-title">Summer Music Festival</h3>
-              <div class="upcoming-events__card-info">
-                <span><i class="fas fa-map-marker-alt"></i> EVENTWAW Stadium</span>
-                <span><i class="fas fa-clock"></i> 18:00</span>
-              </div>
-              <a href="#" class="upcoming-events__card-btn">View Details</a>
-            </div>
-          </div>
-          <div class="upcoming-events__card">
-            <div class="upcoming-events__card-image">
-              <img src="../img/blog/blog-4.jpg" alt="Music Event">
-              <div class="upcoming-events__card-date">
-                <span class="day">15</span>
-                <span class="month">Mar</span>
-              </div>
-            </div>
-            <div class="upcoming-events__card-content">
-              <div class="upcoming-events__card-category">Music</div>
-              <h3 class="upcoming-events__card-title">Summer Music Festival</h3>
-              <div class="upcoming-events__card-info">
-                <span><i class="fas fa-map-marker-alt"></i> EVENTWAW Stadium</span>
-                <span><i class="fas fa-clock"></i> 18:00</span>
-              </div>
-              <a href="#" class="upcoming-events__card-btn">View Details</a>
-            </div>
-          </div>
-          <div class="upcoming-events__card">
-            <div class="upcoming-events__card-image">
-              <img src="../img/blog/blog-5.jpg" alt="Music Event">
-              <div class="upcoming-events__card-date">
-                <span class="day">15</span>
-                <span class="month">Mar</span>
-              </div>
-            </div>
-            <div class="upcoming-events__card-content">
-              <div class="upcoming-events__card-category">Music</div>
-              <h3 class="upcoming-events__card-title">Summer Music Festival</h3>
-              <div class="upcoming-events__card-info">
-                <span><i class="fas fa-map-marker-alt"></i> EVENTWAW Stadium</span>
-                <span><i class="fas fa-clock"></i> 18:00</span>
-              </div>
-              <a href="#" class="upcoming-events__card-btn">View Details</a>
-            </div>
-          </div>
-          <div class="upcoming-events__card">
-            <div class="upcoming-events__card-image">
-              <img src="../img/blog/blog-6.jpg" alt="Music Event">
-              <div class="upcoming-events__card-date">
-                <span class="day">15</span>
-                <span class="month">Mar</span>
-              </div>
-            </div>
-            <div class="upcoming-events__card-content">
-              <div class="upcoming-events__card-category">Music</div>
-              <h3 class="upcoming-events__card-title">Summer Music Festival</h3>
-              <div class="upcoming-events__card-info">
-                <span><i class="fas fa-map-marker-alt"></i> EVENTWAW Stadium</span>
-                <span><i class="fas fa-clock"></i> 18:00</span>
-              </div>
-              <a href="#" class="upcoming-events__card-btn">View Details</a>
-            </div>
-          </div>
-          <div class="upcoming-events__card">
-            <div class="upcoming-events__card-image">
-              <img src="../img/blog/blog-2.jpg" alt="Music Event">
-              <div class="upcoming-events__card-date">
-                <span class="day">15</span>
-                <span class="month">Mar</span>
-              </div>
-            </div>
-            <div class="upcoming-events__card-content">
-              <div class="upcoming-events__card-category">Music</div>
-              <h3 class="upcoming-events__card-title">Summer Music Festival</h3>
-              <div class="upcoming-events__card-info">
-                <span><i class="fas fa-map-marker-alt"></i> EVENTWAW Stadium</span>
-                <span><i class="fas fa-clock"></i> 18:00</span>
-              </div>
-              <a href="#" class="upcoming-events__card-btn">View Details</a>
-            </div>
-          </div>
-          <!-- Repeat for other cards with different content -->
+          <!-- Cards will be inserted here dynamically -->
         </div>
+
         <!--Pagination Section -->
         <section id="blog-pagination" class="blog-pagination section">
-
           <div class="container">
             <div class="d-flex justify-content-center">
               <ul>
-                <li><a href="#"><i class="bi bi-chevron-left"></i></a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#" class="active">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li>...</li>
-                <li><a href="#">10</a></li>
-                <li><a href="#"><i class="bi bi-chevron-right"></i></a></li>
+                <li><a href="#" class="prev-page"><i class="bi bi-chevron-left"></i></a></li>
+                <li><a href="#" class="load-more">Load More</a></li>
+                <li><a href="#" class="next-page"><i class="bi bi-chevron-right"></i></a></li>
               </ul>
             </div>
           </div>
-
-        </section><!-- / Pagination Section -->
+        </section>
       </div>
     </section>
   </main>
 
   <footer id="footer" class="footer position-relative light-background">
 
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-5 col-md-12 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">EVENTWAW</span>
-          </a>
-          <p>Join us to discover and book the best events in EVENTWAW. From music festivals to art exhibitions, we have
-            something for everyone. Stay updated and never miss out on the fun!</p>
-          <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-          <h4>Contact Us</h4>
-          <p>A108 Adam Street</p>
-          <p>New York, NY 535022</p>
-          <p>United States</p>
-          <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-          <p><strong>Email:</strong> <span>info@example.com</span></p>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="sitename">EVENTWAW</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-
-      </div>
-    </div>
-
+    
   </footer>
 
   <!-- Scroll Top -->
@@ -489,6 +209,7 @@
 
 
 
+  <script src="../js/component.js"></script>
   <!-- bootstrap -->
   <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
   <!-- swiper js -->
@@ -500,7 +221,7 @@
   <script src="../js/get-start-popup.js"></script>
   <!-- Cart -->
   <script src="../js/floatCart.js"></script>
-
+  <script src="../js/scroll-animations.js"></script>
 </body>
 
 </html>

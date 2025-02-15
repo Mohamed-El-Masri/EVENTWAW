@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="../vendor/bootstrap-icons/bootstrap-icons.css" <!-- Include your existing head content
+        -->
+    <title>EVENTWAW | Profile</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/floatCart.css">
+    <link rel="stylesheet" href="../css/GetstartPopUP.css">
+    <link rel="stylesheet" href="../css/scroll-animations.css">
+</head>
+
+<body>
+    <header id="header" class="header d-flex align-items-center fixed-top">
+
+    </header>
+
+    <!-- Get Start Login and Register -->
+    <div class="blur-bg-overlay"></div>
+    <div class="form-popup" id="getStartPopup">
+
+    </div>
+
+    <main class="profile-page">
+        <div class="container">
+            <!-- Profile Header -->
+            <div class="profile-header">
+                <div class="profile-cover">
+                    <div class="profile-avatar">
+                        <img src="../img/team/team-2.jpg" alt="User Avatar">
+                        <button class="change-avatar"><i class="fas fa-camera"></i></button>
+                    </div>
+                </div>
+                <div class="profile-info">
+                    <h1>John Doe</h1>
+                    <p>Member since 2024</p>
+                </div>
+            </div>
+
+            <!-- Profile Navigation -->
+            <div class="profile-nav">
+                <ul class="nav-tabs">
+                    <li class="active" data-tab="overview">Overview</li>
+                    <li data-tab="tickets">My Tickets</li>
+                    <li data-tab="settings">Settings</li>
+                </ul>
+            </div>
+
+            <!-- Profile Content -->
+            <div class="profile-content">
+                <!-- Overview Tab -->
+                <div class="tab-content active" id="overview">
+                    <div class="profile-stats">
+                        <div class="stat-card">
+                            <h3>5</h3>
+                            <p>Events Attended</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>2</h3>
+                            <p>Upcoming Events</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>3</h3>
+                            <p>Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-details">
+                        <h2>Personal Information</h2>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <label>Full Name</label>
+                                <p>John Doe</p>
+                            </div>
+                            <div class="info-item">
+                                <label>Email</label>
+                                <p>john.doe@example.com</p>
+                            </div>
+                            <div class="info-item">
+                                <label>Phone</label>
+                                <p>+1 234 567 890</p>
+                            </div>
+                            <div class="info-item">
+                                <label>Location</label>
+                                <p>New York, USA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tickets Tab -->
+                <div class="tab-content" id="tickets">
+                    <div class="tickets-container">
+                        <div class="tickets-header">
+                            <h2>My Tickets</h2>
+                            <div class="tickets-filter">
+                                <button class="filter-btn active" data-filter="upcoming">Upcoming Events</button>
+                                <button class="filter-btn" data-filter="past">Past Events</button>
+                            </div>
+                        </div>
+
+                        <!-- Upcoming Events Section -->
+                        <div class="tickets-section active" id="upcoming-events">
+                            <div class="tickets-grid">
+                                <!-- Event 1 -->
+                                <div class="ticket-card">
+                                    <div class="ticket-status">Upcoming</div>
+                                    <div class="ticket-image">
+                                        <img src="../img/blog/blog-4.jpg" alt="Summer Music Festival">
+                                        <div class="ticket-date">
+                                            <span class="day">15</span>
+                                            <span class="month">JUL</span>
+                                        </div>
+                                    </div>
+                                    <div class="ticket-info">
+                                        <h4>Summer Music Festival</h4>
+                                        <div class="event-details">
+                                            <p><i class="fas fa-clock"></i> 7:00 PM</p>
+                                            <p><i class="fas fa-map-marker-alt"></i> Central Park</p>
+                                        </div>
+                                        <div class="ticket-actions">
+                                            <button class="btn-download-ticket"><i class="fas fa-download"></i>
+                                                Download</button>
+                                            <button class="btn-view-details">View Details</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Event 2 -->
+                                <div class="ticket-card">
+                                    <div class="ticket-status">Upcoming</div>
+                                    <div class="ticket-image">
+                                        <img src="../img/blog/blog-3.jpg" alt="Art Exhibition">
+                                        <div class="ticket-date">
+                                            <span class="day">20</span>
+                                            <span class="month">JUL</span>
+                                        </div>
+                                    </div>
+                                    <div class="ticket-info">
+                                        <h4>Modern Art Exhibition</h4>
+                                        <div class="event-details">
+                                            <p><i class="fas fa-clock"></i> 10:00 AM</p>
+                                            <p><i class="fas fa-map-marker-alt"></i> Art Gallery</p>
+                                        </div>
+                                        <div class="ticket-actions">
+                                            <button class="btn-download-ticket"><i class="fas fa-download"></i>
+                                                Download</button>
+                                            <button class="btn-view-details">View Details</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Event 3 -->
+                                <div class="ticket-card">
+                                    <div class="ticket-status">Upcoming</div>
+                                    <div class="ticket-image">
+                                        <img src="../img/blog/blog-1.jpg" alt="Food Festival">
+                                        <div class="ticket-date">
+                                            <span class="day">25</span>
+                                            <span class="month">JUL</span>
+                                        </div>
+                                    </div>
+                                    <div class="ticket-info">
+                                        <h4>International Food Festival</h4>
+                                        <div class="event-details">
+                                            <p><i class="fas fa-clock"></i> 12:00 PM</p>
+                                            <p><i class="fas fa-map-marker-alt"></i> City Square</p>
+                                        </div>
+                                        <div class="ticket-actions">
+                                            <button class="btn-download-ticket"><i class="fas fa-download"></i>
+                                                Download</button>
+                                            <button class="btn-view-details">View Details</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pagination">
+                                <button class="page-btn active" data-page="1">1</button>
+                                <button class="page-btn next"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Past Events Section -->
+                        <div class="tickets-section" id="past-events">
+                            <div class="tickets-grid">
+                                <!-- Past Event 1 -->
+                                <div class="ticket-card past">
+                                    <div class="ticket-status past">Completed</div>
+                                    <div class="ticket-image">
+                                        <img src="../img/blog/blog-2.jpg" alt="Tech Conference">
+                                        <div class="ticket-date past">
+                                            <span class="day">10</span>
+                                            <span class="month">DEC</span>
+                                        </div>
+                                    </div>
+                                    <div class="ticket-info">
+                                        <h4>Tech Conference 2023</h4>
+                                        <div class="event-details">
+                                            <p><i class="fas fa-clock"></i> 9:00 AM</p>
+                                            <p><i class="fas fa-map-marker-alt"></i> Convention Center</p>
+                                        </div>
+                                        <div class="ticket-actions">
+                                            <button class="btn-review"><i class="fas fa-star"></i> Write Review</button>
+                                            <button class="btn-view-details">View Details</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Add 2 more past events with similar structure -->
+                            </div>
+
+                            <!-- Pagination for past events -->
+                            <div class="pagination">
+                                <button class="page-btn active" data-page="1">1</button>
+                                <button class="page-btn next"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Settings Tab -->
+                <div class="tab-content" id="settings">
+                    <div class="settings-container">
+                        <h2>Account Settings</h2>
+
+                        <!-- Profile Settings Form -->
+                        <form class="settings-form">
+                            <div class="form-section">
+                                <h3>Profile Information</h3>
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label>Full Name</label>
+                                        <input type="text" value="John Doe">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Email</label>
+                                        <input type="email" value="john.doe@example.com">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Phone</label>
+                                        <input type="tel" value="+1 234 567 890">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Location</label>
+                                        <input type="text" value="New York, USA">
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn-save">Save Changes</button>
+                            </div>
+                        </form>
+
+                        <!-- Password Change Form -->
+                        <form class="settings-form">
+                            <div class="form-section">
+                                <h3>Change Password</h3>
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label>Current Password</label>
+                                        <input type="password">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>New Password</label>
+                                        <input type="password">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Confirm New Password</label>
+                                        <input type="password">
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn-save">Update Password</button>
+                            </div>
+                        </form>
+
+                        <!-- Notification Settings -->
+                        <div class="form-section">
+                            <h3>Notification Settings</h3>
+                            <div class="notification-settings">
+                                <div class="notification-option">
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                    <div class="notification-text">
+                                        <h4>Email Notifications</h4>
+                                        <p>Receive updates about your tickets and upcoming events</p>
+                                    </div>
+                                </div>
+                                <div class="notification-option">
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                    <div class="notification-text">
+                                        <h4>Marketing Emails</h4>
+                                        <p>Receive promotional offers and newsletters</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Delete Account -->
+                        <div class="form-section danger-zone">
+                            <h3>Danger Zone</h3>
+                            <button class="btn-delete-account">Delete Account</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ticket-details-popup">
+            <div class="popup-content">
+                <span class="close-popup"><i class="fas fa-times"></i></span>
+                <div class="ticket-details-header">
+                    <div class="ticket-image-large">
+                        <img id="popupEventImage" src="" alt="Event">
+                        <div class="ticket-date-large">
+                            <span id="popupEventDay" class="day"></span>
+                            <span id="popupEventMonth" class="month"></span>
+                        </div>
+                    </div>
+                    <div class="event-info-large">
+                        <h2 id="popupEventTitle"></h2>
+                        <div class="event-meta">
+                            <p><i class="fas fa-clock"></i> <span id="popupEventTime"></span></p>
+                            <p><i class="fas fa-map-marker-alt"></i> <span id="popupEventLocation"></span></p>
+                            <p><i class="fas fa-ticket-alt"></i> <span id="popupEventStatus"></span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ticket-details-body">
+                    <div class="ticket-qr">
+                        <img src="../img/qr-code.png" alt="QR Code">
+                        <p>Scan to verify ticket</p>
+                    </div>
+                    <div class="ticket-actions-large">
+                        <button class="btn-download-ticket">
+                            <i class="fas fa-download"></i> Download Ticket
+                        </button>
+                        <button class="btn-add-calendar">
+                            <i class="fas fa-calendar-plus"></i> Add to Calendar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="footer" class="footer position-relative light-background">
+
+
+    </footer>
+
+
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+    <script src="../js/component.js"></script>
+
+    <!-- bootstrap -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- swiper js -->
+
+    <!-- custom js -->
+    <script src="../js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="../js/profile.js"></script>
+    <script src="../js/floatCart.js"></script>
+    <script src="../js/scroll-animations.js"></script>
+
+</body>
+
+</html>

@@ -216,3 +216,70 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+// Enhanced preloader handling
+(function() {
+    const preloader = document.querySelector('#preloader');
+    
+    if (preloader) {
+        // Hide preloader when all content is loaded
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                preloader.style.visibility = 'hidden';
+                preloader.style.opacity = '0';
+                document.body.classList.remove('loading-active');
+            }, 500);
+        });
+
+        // Show preloader on page unload
+        window.addEventListener('beforeunload', () => {
+            preloader.style.visibility = 'visible';
+            preloader.style.opacity = '1';
+            document.body.classList.add('loading-active');
+        });
+    }
+})();
+
+// Page Loading System
+(function() {
+    const preloader = document.querySelector('#preloader');
+    
+    // Show loader on page load
+    window.addEventListener('load', () => {
+        if (preloader) {
+            setTimeout(() => {
+                preloader.style.visibility = 'hidden';
+                preloader.style.opacity = '0';
+                document.body.classList.remove('loading-active');
+            }, 500);
+        }
+    });
+
+    // Show loader before page unload
+    window.addEventListener('beforeunload', () => {
+        if (preloader) {
+            preloader.style.visibility = 'visible';
+            preloader.style.opacity = '1';
+            document.body.classList.add('loading-active');
+        }
+    });
+
+    // Intercept all link clicks
+    document.addEventListener('click', (e) => {
+        const link = e.target.closest('a');
+        if (link && !link.hasAttribute('download') && !link.hasAttribute('target')) {
+            const href = link.getAttribute('href');
+            if (href && !href.startsWith('#') && !href.startsWith('javascript:')) {
+                e.preventDefault();
+                if (preloader) {
+                    preloader.style.visibility = 'visible';
+                    preloader.style.opacity = '1';
+                    document.body.classList.add('loading-active');
+                }
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 300);
+            }
+        }
+    });
+})();

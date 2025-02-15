@@ -1,0 +1,51 @@
+
+/* Fade In Up */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-out;
+}
+
+.scroll-animate.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Different animations based on data attributes */
+.scroll-animate[data-animation="fade-right"] {
+    transform: translateX(-50px);
+}
+
+.scroll-animate[data-animation="fade-left"] {
+    transform: translateX(50px);
+}
+
+.scroll-animate[data-animation="fade-up"] {
+    transform: translateY(50px);
+}
+
+.scroll-animate[data-animation="fade-down"] {
+    transform: translateY(-50px);
+}
+
+.scroll-animate[data-animation="zoom-in"] {
+    transform: scale(0.9);
+}
+
+/* Active states */
+.scroll-animate[data-animation="fade-right"].active,
+.scroll-animate[data-animation="fade-left"].active,
+.scroll-animate[data-animation="fade-up"].active,
+.scroll-animate[data-animation="fade-down"].active {
+    transform: translate(0);
+}
+
+.scroll-animate[data-animation="zoom-in"].active {
+    transform: scale(1);
+}
+
+/* Delay variations */
+.scroll-animate[data-delay="200"] { transition-delay: 0.2s; }
+.scroll-animate[data-delay="400"] { transition-delay: 0.4s; }
+.scroll-animate[data-delay="600"] { transition-delay: 0.6s; }
+.scroll-animate[data-delay="800"] { transition-delay: 0.8s; }

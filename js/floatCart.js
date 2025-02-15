@@ -39,28 +39,61 @@ addItem('Product 1', 10.00); // Adding the same product to test quantity increme
 
 function toggleCart() {
     const cart = document.getElementById('floating_cart');
-    cart.style.right = cart.style.right === '20px' ? '-400px' : '20px'; // Toggle cart visibility
+    const body = document.body;
+    
+    // Toggle active class instead of using style directly
+    cart.classList.toggle('active');
+    
+    // Toggle body scroll lock
+    body.classList.toggle('cart-open');
 }
 
-function addItem(productName, productPrice) {
-    const existingItem = cartItems.find(item => item.name === productName);
-    if (existingItem) {
-        existingItem.quantity += 1;
-    } else {
-        cartItems.push({ name: productName, price: productPrice, quantity: 1 });
+// Close cart when clicking outside
+document.addEventListener('click', (e) => {
+    const cart = document.getElementById('floating_cart');
+    const cartBtn = document.querySelector('.cartIcon');
+    
+    if (!cart.contains(e.target) && !cartBtn.contains(e.target) && cart.classList.contains('active')) {
+        toggleCart();
     }
-    totalAmount += productPrice;
-    removeProductFromUpsell(productName); // Remove the product from the upsell section
-    updateCart();
+});
+
+// Close cart on escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && document.getElementById('floating_cart').classList.contains('active')) {
+        toggleCart();
+    }
+});
+
+function addItem(productName, productPrice) {
+    const cartBody = document.querySelector('.floating_cart_body');
+    cartBody.classList.add('loading');
+
+    setTimeout(() => {
+        const existingItem = cartItems.find(item => item.name === productName);
+        if (existingItem) {
+            existingItem.quantity += 1;
+        } else {
+            cartItems.push({ name: productName, price: productPrice, quantity: 1 });
+        }
+        totalAmount += productPrice;
+        removeProductFromUpsell(productName);
+        updateCart();
+    }, 300);
 }
 
 function removeItem(productName) {
-    const itemIndex = cartItems.findIndex(item => item.name === productName);
-    if (itemIndex > -1) {
-        totalAmount -= cartItems[itemIndex].price * cartItems[itemIndex].quantity;
-        cartItems.splice(itemIndex, 1);
-        updateCart();
-    }
+    const cartBody = document.querySelector('.floating_cart_body');
+    cartBody.classList.add('loading');
+
+    setTimeout(() => {
+        const itemIndex = cartItems.findIndex(item => item.name === productName);
+        if (itemIndex > -1) {
+            totalAmount -= cartItems[itemIndex].price * cartItems[itemIndex].quantity;
+            cartItems.splice(itemIndex, 1);
+            updateCart();
+        }
+    }, 300);
 }
 
 function removeProductFromUpsell(productName) {
@@ -73,20 +106,31 @@ function removeProductFromUpsell(productName) {
 }
 
 function updateCart() {
+    const cartBody = document.querySelector('.floating_cart_body');
     const cartItemsDiv = document.getElementById('cart_items');
     const checkoutButton = document.getElementById('checkout_button');
     const cartTotal = document.getElementById('cart_total');
 
-    cartItemsDiv.innerHTML = cartItems.length > 0 ? cartItems.map(item => `
-        <div class="cart-item">
-            <span class="item-name">${item.name}</span>
-            <span class="item-price">$${(item.price * item.quantity).toFixed(2)}</span>
-            <button class="remove-item" onclick="removeItem('${item.name}')">Remove</button>
-        </div>
-    `).join('') : 'Cart is empty';
-    cartTotal.innerText = `$${totalAmount.toFixed(2)}`;
-    checkoutButton.style.pointerEvents = cartItems.length > 0 ? 'auto' : 'none';
-    checkoutButton.style.opacity = cartItems.length > 0 ? '1' : '0.5';
+    // Add loading state
+    cartBody.classList.add('loading');
+
+    // Simulate loading delay
+    setTimeout(() => {
+        cartItemsDiv.innerHTML = cartItems.length > 0 ? cartItems.map(item => `
+            <div class="cart-item">
+                <span class="item-name">${item.name}</span>
+                <span class="item-price">$${(item.price * item.quantity).toFixed(2)}</span>
+                <button class="remove-item" onclick="removeItem('${item.name}')">Remove</button>
+            </div>
+        `).join('') : '<p>Cart is empty</p>';
+
+        cartTotal.innerText = `$${totalAmount.toFixed(2)}`;
+        checkoutButton.style.pointerEvents = cartItems.length > 0 ? 'auto' : 'none';
+        checkoutButton.style.opacity = cartItems.length > 0 ? '1' : '0.5';
+
+        // Remove loading state
+        cartBody.classList.remove('loading');
+    }, 500); // 500ms delay for demonstration
 }
 
 function continueShopping() {
